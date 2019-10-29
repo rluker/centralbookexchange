@@ -1,6 +1,7 @@
 com/centralbookexchange/webapp/CBEApplication.class
-com/centralbookexchange/webapp/model/Person.class
 com/centralbookexchange/webapp/dao/FakePersonDataAccessService.class
-com/centralbookexchange/webapp/service/PersonService.class
 com/centralbookexchange/webapp/dao/PersonDAO.class
+com/centralbookexchange/webapp/model/Person.class
+com/centralbookexchange/webapp/service/PersonService.class
 com/centralbookexchange/webapp/api/PersonController.class
+com/centralbookexchange/webapp/dao/PersonDataAccessService.class
