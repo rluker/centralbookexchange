@@ -6,14 +6,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class IndexController {
+public class BlankController {
 
-    @RequestMapping("/")
+    @RequestMapping("/blank")
     public String index(){
-        return "index";
+        return "blank";
     }
 
-    @GetMapping("/")
+    @GetMapping("/blank")
     public ModelAndView getNumBooks() {
         ModelAndView mav = new ModelAndView(index());
         mav.addObject("numOfBooks", "1234");
