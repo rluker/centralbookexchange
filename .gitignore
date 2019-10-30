@@ -3,4 +3,5 @@ bin/
 *.project
 *.prefs
 webapp/.classpath
-*.class
+target/
+
