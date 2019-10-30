@@ -6,10 +6,11 @@
     <link rel="stylesheet" href="home.css">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
 </head>
-
 <body>
-    THIS IS A BLANK PAGE.
+    <p>This is a test.</p>
+    <!--/*@thymesVar id="numOfBooks" type=""*/-->
+    <p th:text="${numOfBooks} + ' is a temp variable showing thymeleaf connectivity to the IndexController. [WILL BE DELETED]'"></p>
 </body>
-
 </html>
