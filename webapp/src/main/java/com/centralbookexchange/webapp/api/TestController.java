@@ -6,17 +6,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class TestController {
+public class TestController 
+{
 
-    @RequestMapping("/test")
-    public String index(){
-        return "test";
-    }
-
-    @GetMapping("/test")
-    public ModelAndView getNumBooks() {
-        ModelAndView mav = new ModelAndView(index());
-        mav.addObject("numOfBooks", "1234");
-        return mav;
+	@RequestMapping("/test")
+    public ModelAndView handleRequest()
+	{
+        return new ModelAndView("test"); 
     }
 }
