@@ -6,3 +6,4 @@ bin/
 webapp/.classpath
 webapp/.project
 *.prefs
+*.iml
