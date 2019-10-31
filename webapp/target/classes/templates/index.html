@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <title> Central Book Exchange</title>
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+</head>
+
+<body>
+
+<!--/*@thymesVar id="numOfBooks" type=""*/-->
+<!--<h2 th:text="${numOfBooks} + ' is a temp variable showing thymeleaf connectivity to the IndexController. [WILL BE DELETED]'"></h2>-->
+
+<div class = "picAndStuff">
+
+    <div class = "about">
+        <img class="logo" src="img/og_logo.png">
+        <a class="search"><img src="img/search.png">Search Bar</a>
+        <a>
+<!--            <img src = img/Logo.png>-->
+<!--            <img src="img/og_logo.png">-->
+        </a>
+<!--        <h2>Welcome to</h2>-->
+<!--        <h1>Central Book Exchange</h1>-->
+    </div>
+
+    <nav class = "tabs">
+<!--        <img class="logo" src="img/og_logo.png">-->
+        <a class = "active">Home</a>
+        <!--                <h2 th:text="${numberOfBooks}">Books</h2>-->
+        <a>About</a>
+        <a>Gallery</a>
+        <a>Event</a>
+        <a>Exchange</a>
+        <a href="/test">Test</a>
+        <!-- <input type="button"  onclick="location.href='/test.html'" value="test" > -->
+    </nav>
+
+    <div class = "placeholder">
+        <p>   </p>
+    </div>
+    
+
+</div>
+
+<h1> - About Us - </h1>
+<h1> - Exchange - </h1>
+<div class="exchange">
+    <p>Exchange books, get points, spend points to discount books.
+        If you’re downsizing, spring cleaning, or helping family or friends clean house,
+        bring in the books you are ready to part with. When you bring in books, we count
+        the number of paperbacks, hardcovers and mass markets and, according to their condition,
+        give you points for them. The points live on our system for a long time.
+
+        Exchange points give you discounts on books that you purchase at our store.
+        Moving out of the area? That’s fine, you can donate our points to teachers,
+        who always need help buying books for their students.</p>
+    <div class = "imgBox">
+        <img src = img/exchange.jpg>
+    </div>
+</div>
+
+<h1 style="text-align: center;"> - Current Events - </h1>
+
+<div class = "container">
+    <button class="banners-display-left" onclick="plusDivs(-1)"><img src=img/back.png></button>
+    <button class="banners-display-right" onclick="plusDivs(+1)"><img src=img/next.png></button>
+    <img class = "banners" src = img/eventbanners/warehouseBanner.png>
+    <img class = "banners" src = img/eventbanners/halloweenBanner.png>
+    <img class = "banners" src = img/eventbanners/readingNightBanner.png>
+</div>
+
+<h1 style="text-align: center;"> - Staff Picks -</h1>
+
+<div class="box">
+
+    <div class="card">
+        <img src="img/books/book.png" alt="preview1" style="left:0%">
+        <h1>Book1</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="img/books/book1.png" alt="preview2" style="left:0%">
+        <h1>Book2</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="img/books/book2.png" alt="preview3" style="left:0%">
+        <h1>Book3</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="img/books/book3.png" alt="preview4" style="left:0%">
+        <h1>Book4</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="img/books/book4.png" alt="preview5" style="left:0%">
+        <h1>Book5</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+    <div class="card">
+        <img src="img/books/book5.png" alt="preview6" style="left:0%">
+        <h1>Book6</h1>
+        <p class="price">$29.99</p>
+        <p>Some text about the book</p>
+        <p><button>Add to Cart</button></p>
+    </div>
+
+</div>
+
+<div class = "footer">
+    <p>2017 S 1100 E Salt Lake City, Utah<br>Contact us: (801)-485-3913</p>
+</div>
+
+</body>
+
+<script src="banners.js"></script>
+
+</html>

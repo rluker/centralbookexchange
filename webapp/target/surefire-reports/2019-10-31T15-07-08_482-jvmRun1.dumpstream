@@ -1,0 +1,25 @@
+# Created at 2019-10-31T15:07:14.864
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2019-10-31T15:07:15.581
+Unexpected IOException with stream: 2019-10-31 15:07:15.580  INFO 10212 --- [           main] c.c.webapp.WebappApplicationTests        : Started WebappApplicationTests in 4.464 seconds (JVM running for 5.963)
+
+
+# Created at 2019-10-31T15:07:15.620
+Unexpected IOException: 5,1,com.centralbookexchange.webapp.WebappApplicationTests,contextLoads(com.centralbookexchange.webapp.WebappApplicationTests),null,null,null
+
+
+# Created at 2019-10-31T15:07:15.868
+Unexpected IOException: 6,1,com.centralbookexchange.webapp.WebappApplicationTests,contextLoads(com.centralbookexchange.webapp.WebappApplicationTests),null,null,null
+
+
+# Created at 2019-10-31T15:07:15.875
+Unexpected IOException: 2,1,org.apache.maven.surefire.junit4.JUnit4Provider,com.centralbookexchange.webapp.WebappApplicationTests,null,null,null
+
+
