@@ -68,6 +68,7 @@ h1 {
     width: 100%;
     font-family: 'Julius Sans One', sans-serif;
     display: flow-root;
+    border: 3px solid black;
     line-height: 60%;
 }
 .about a{
@@ -181,7 +182,7 @@ h1 {
 
 .footer{
     position: sticky;
-    bottom: 1%;
+    bottom: 2%;
     height: 50px;
     background-color: rgba(252, 249, 242, 0.9);
 
