@@ -2,3 +2,7 @@
 .idea/*
 target/
 webapp/target/
+bin/
+webapp/.classpath
+webapp/.project
+*.prefs
