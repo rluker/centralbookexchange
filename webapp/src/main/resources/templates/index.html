@@ -12,19 +12,23 @@
 <body>
 
 <!--/*@thymesVar id="numOfBooks" type=""*/-->
-<h2 th:text="${numOfBooks} + ' is a temp variable showing thymeleaf connectivity to the IndexController. [WILL BE DELETED]'"></h2>
+<!--<h2 th:text="${numOfBooks} + ' is a temp variable showing thymeleaf connectivity to the IndexController. [WILL BE DELETED]'"></h2>-->
 
 <div class = "picAndStuff">
 
     <div class = "about">
+        <img class="logo" src="img/og_logo.png">
+        <a class="search"><img src="img/search.png">Search Bar</a>
         <a>
-            <img src = img/Logo.png>
+<!--            <img src = img/Logo.png>-->
+<!--            <img src="img/og_logo.png">-->
         </a>
-        <h2>Welcome to</h2>
-        <h1>Central Book Exchange</h1>
+<!--        <h2>Welcome to</h2>-->
+<!--        <h1>Central Book Exchange</h1>-->
     </div>
 
-    <div class = "tabs">
+    <nav class = "tabs">
+<!--        <img class="logo" src="img/og_logo.png">-->
         <a class = "active">Home</a>
         <!--                <h2 th:text="${numberOfBooks}">Books</h2>-->
         <a>About</a>
@@ -33,7 +37,7 @@
         <a>Exchange</a>
         <a href="/test">Test</a>
         <!-- <input type="button"  onclick="location.href='/test.html'" value="test" > -->
-    </div>
+    </nav>
 
     <div class = "placeholder">
         <p>   </p>
