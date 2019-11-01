@@ -2,6 +2,7 @@
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/dao/FakePersonDataAccessService.java
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/dao/PersonDataAccessService.java
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/model/Person.java
+/Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/config/WebConfig.java
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/dao/PersonDAO.java
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/CBEApplication.java
 /Users/rachellluker/centralbookexchangeproj/webapp/src/main/java/com/centralbookexchange/webapp/service/PersonService.java

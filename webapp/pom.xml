@@ -116,7 +116,7 @@
       			<artifactId>spring-boot-maven-plugin</artifactId>
       			<version>2.2.0.RELEASE</version>
       			<configuration>
-        			<mainClass>${start-class}</mainClass>
+        			<mainClass>com.centralbookexchange.webapp.CBEApplication</mainClass>
        				<layout>ZIP</layout>
       			</configuration>
      			<executions>
