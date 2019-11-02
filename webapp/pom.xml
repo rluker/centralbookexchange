@@ -2,17 +2,19 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.centralbookexchange</groupId>
+	<artifactId>webapp</artifactId>
+	<packaging>jar</packaging>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>webapp</name>
+	<description>Central Book Exchange project using Spring Boot framework</description>
+
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.1.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.centralbookexchange</groupId>
-	<artifactId>webapp</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>webapp</name>
-	<description>Central Book Exchange project using Spring Boot framework</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -114,7 +116,7 @@
       			<artifactId>spring-boot-maven-plugin</artifactId>
       			<version>2.2.0.RELEASE</version>
       			<configuration>
-        			<mainClass>${start-class}</mainClass>
+        			<mainClass>com.centralbookexchange.webapp.CBEApplication</mainClass>
        				<layout>ZIP</layout>
       			</configuration>
      			<executions>

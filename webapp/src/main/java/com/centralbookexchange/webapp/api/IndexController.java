@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
-public class IndexController 
+public class IndexController
 {
     @RequestMapping("/")
     public String index()
@@ -15,11 +15,11 @@ public class IndexController
     }
 
     @GetMapping("/")
-    public ModelAndView getNumBooks() 
+    public ModelAndView getNumBooks()
     {
         ModelAndView mav = new ModelAndView(index());
         mav.addObject("numOfBooks", "1234");
         return mav;
     }
-    
+
 }

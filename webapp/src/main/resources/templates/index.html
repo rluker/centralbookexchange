@@ -3,7 +3,8 @@
       xmlns:th="http://www.thymeleaf.org">
 <head lang="en">
     <title> Central Book Exchange</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One&display=swap" rel="stylesheet">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 
@@ -15,34 +16,45 @@
 <!--<h2 th:text="${numOfBooks} + ' is a temp variable showing thymeleaf connectivity to the IndexController. [WILL BE DELETED]'"></h2>-->
 
 <div class = "picAndStuff">
+    <div class="header">
+        <div class = "about">
+            <img class="logo" src="img/og_logo.png">
+            <!--        <p>HELP ME!!!</p>-->
+        </div>
+        <div class ="tabs">
+            <nav class = "tabs">
+                <!--        <img class="logo" src="img/og_logo.png">-->
+                <a href="/cbe" class="active">Home</a>
+                <!--                <h2 th:text="${numberOfBooks}">Books</h2>-->
+                <a href="/test">About</a>
+                <a href="/test">Events</a>
+                <a href="/test">Books</a>
+                <a href="/test">Cart</a>
+                <!--        <a href="/test">Test</a>-->
+                <!-- <input type="button"  onclick="location.href='/test.html'" value="test" > -->
+            </nav>
+        </div>
+        <div>
+            <div class="search">
+                <a><img id=search src="img/search.png">&nbsp;</a>
+                <a>
+                    <!--            <img src = img/Logo.png>-->
+                    <!--            <img src="img/og_logo.png">-->
+                </a>
+                <!--        <h2>Welcome to</h2>-->
+                <!--        <h1>Central Book Exchange</h1>-->
+            </div>
+            <div class="hours">
 
-    <div class = "about">
-        <img class="logo" src="img/og_logo.png">
-        <a class="search"><img src="img/search.png">Search Bar</a>
-        <a>
-<!--            <img src = img/Logo.png>-->
-<!--            <img src="img/og_logo.png">-->
-        </a>
-<!--        <h2>Welcome to</h2>-->
-<!--        <h1>Central Book Exchange</h1>-->
+            </div>
+        </div>
     </div>
+</div>
 
-    <nav class = "tabs">
-<!--        <img class="logo" src="img/og_logo.png">-->
-        <a class = "active">Home</a>
-        <!--                <h2 th:text="${numberOfBooks}">Books</h2>-->
-        <a>About</a>
-        <a>Gallery</a>
-        <a>Event</a>
-        <a>Exchange</a>
-        <a href="/test">Test</a>
-        <!-- <input type="button"  onclick="location.href='/test.html'" value="test" > -->
-    </nav>
+<div class = "placeholder">
+    <p>   </p>
+</div>
 
-    <div class = "placeholder">
-        <p>   </p>
-    </div>
-    
 
 </div>
 
@@ -128,11 +140,13 @@
 </div>
 
 <div class = "footer">
-    <p>2017 S 1100 E Salt Lake City, Utah<br>Contact us: (801)-485-3913</p>
+    <p>2017 S 1100 E Salt Lake City, Utah<br>Contact us: <a href=tel:8014853913> (801)-485-3913<a></a></p>
 </div>
 
 </body>
 
-<script src="banners.js"></script>
+<script src="js/banners.js"></script>
+<script type="text/javascript" th:src="@{/js/banner.js}"></script>
+
 
 </html>
