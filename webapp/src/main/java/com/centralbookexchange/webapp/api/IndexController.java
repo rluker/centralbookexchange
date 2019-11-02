@@ -8,11 +8,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class IndexController 
 {
-    @RequestMapping("/cbe")
+    @RequestMapping("/")
+    public String index()
+    {
+        return "index";
+    }
+
+    @GetMapping("/")
     public ModelAndView getNumBooks() 
     {
-        ModelAndView mav = new ModelAndView("index");
+        ModelAndView mav = new ModelAndView(index());
         mav.addObject("numOfBooks", "1234");
         return mav;
     }
+    
 }

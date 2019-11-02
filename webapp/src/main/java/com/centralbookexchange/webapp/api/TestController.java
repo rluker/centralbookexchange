@@ -8,10 +8,18 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class TestController 
 {
+	
+    @RequestMapping("/test")
+    public String index()
+    {
+        return "/test";
+    }
 
-	@RequestMapping("/test")
-    public ModelAndView handleRequest()
-	{
-        return new ModelAndView("test"); 
+    @GetMapping("/test")
+    public ModelAndView getNumBooks() 
+    {
+        ModelAndView mav = new ModelAndView(index());
+        mav.addObject("numOfBooks", "1234");
+        return mav;
     }
 }
