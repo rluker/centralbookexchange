@@ -21,5 +21,13 @@ public class IndexController
         mav.addObject("numOfBooks", "1234");
         return mav;
     }
+    
+    @GetMapping("/index")
+    public ModelAndView getNumBooks2()
+    {
+        ModelAndView mav = new ModelAndView(index());
+        mav.addObject("numOfBooks", "1234");
+        return mav;
+    }
 
 }
