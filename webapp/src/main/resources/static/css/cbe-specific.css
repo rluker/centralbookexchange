@@ -1,0 +1,41 @@
+#cbe-event-banner 
+{
+	box-sizing: content-box;
+    position: relative;
+    width: 80%;
+    height: 80%;
+    //overflow: hidden;
+    margin: 10px auto;
+    background: white;
+}
+
+#cbe-event-banner img
+{
+	height: 100%;
+	width: 100%
+}
+
+.banners
+{
+	box-sizing: content-box;
+}
+
+.last-banner-button
+{
+    position: absolute;
+    background-color: rgba(225, 225, 225, 0);
+    height: 10%;
+    width: 5%;
+    top: 50%;
+    left: 0%;
+}
+
+.next-banner-button
+{
+    position: absolute;
+    background-color: rgba(225, 225, 225, 0);
+    height: 10%;
+    width: 5%;
+    top: 50%;
+    right: 0%;
+}
