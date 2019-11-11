@@ -1871,3 +1871,21 @@ h1, h2, h3, h4, h5,
 .home-section{
 	background-color: var(--deep-red);
 }
+
+.sticky-contact-footer
+{
+	z-index: 100;
+	position: sticky;
+    bottom: 1%;
+    height: 4em;
+    background-color: rgba(252, 249, 242, 0.9);
+    -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
+    box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); 
+}
+.sticky-contact-footer p
+{
+	position: relative;	
+	top: 10%;
+    right: 3%;
+    text-align: end;
+}
