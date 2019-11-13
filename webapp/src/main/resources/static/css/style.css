@@ -633,14 +633,7 @@ h1, h2, h3, h4, h5,
 @media (max-width: 991.98px) {
   .site-blocks-cover h1 {
     font-size: 2rem; } }
-.site-blocks-cover p {
-  /*color: white;*/
-  color: #fff2e0;
-  font-size: 1rem;
-  line-height: 1.5;
-  font-weight: 300; }
-.site-blocks-cover p.lead {
-  font-size: 20px; }
+
 .site-blocks-cover .intro-text {
   font-size: 16px;
   line-height: 1.5; }
@@ -698,13 +691,14 @@ h1, h2, h3, h4, h5,
 .text-leather { color: var(--leather); }
 .text-mint { color: var(--mint); }
 .text-sea { color: var(--sea); }
+.text-white { color: white; }
 
 .ff-NG{ font-family: 'Nanum Gothic', sans-serif; font-size: 4em; }
 .ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
 .ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
 .ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
-.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; }
+.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
 .ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
 .ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
 .ff-NUL{ font-family: 'Nunito', sans-serif; font-size: .97em; font-weight: 200; }
