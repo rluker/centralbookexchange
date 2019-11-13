@@ -330,14 +330,16 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu .active {
   color: var(--deep-red);
   display: inline-block;
-  padding: 5px 10px; }
+  padding-top: 5px;
+  padding-left: 30px;}
 .site-navbar .site-navigation .site-menu a {
   text-decoration: none ;
   display: inline-block; }
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block; }
 .site-navbar .site-navigation .site-menu > li > a {
-  padding: 5px 10px;
+  padding-top: 5px;
+  padding-left: 30px;
   color: #000;
   display: inline-block;
   text-decoration: none ; }
@@ -351,7 +353,7 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu .has-children > a:before {
   position: absolute;
   content: "\e313";
-  font-size: 16px;
+  font-size: 16xp;
   top: 50%;
   right: 0;
   -webkit-transform: translateY(-50%);
@@ -437,6 +439,7 @@ h1, h2, h3, h4, h5,
 
 .site-mobile-menu {
   font-family: 'Julius Sans One';, sans-serif;
+  font-size: 2em;
   width: 300px;
   position: fixed;
   right: 0;
@@ -549,7 +552,7 @@ h1, h2, h3, h4, h5,
   width: 100%; }
 .site-mobile-menu .site-nav-wrap > li > a {
   padding-left: 20px;
-  font-size: 20px; }
+ }
 .site-mobile-menu .site-nav-wrap > li > ul {
   padding: 0;
   margin: 0;
@@ -701,7 +704,7 @@ h1, h2, h3, h4, h5,
 .ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
 .ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
-.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.3em; }
+.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; }
 .ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
 .ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
 .ff-NUL{ font-family: 'Nunito', sans-serif; font-size: .97em; font-weight: 200; }
