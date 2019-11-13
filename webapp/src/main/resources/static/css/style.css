@@ -1316,16 +1316,14 @@ h1, h2, h3, h4, h5,
 
 .event-banner 
 {
-  position: relative;
-  width: 80%;
-  height: 60%;
-  overflow: hidden;
-  text-align: center;
+  max-width: 80%;
   margin: 0 auto;
+  text-align: center;
 }
+
 .event-banner img {
-  width: 100%;
-  height: 100%;
+  width: auto;
+  height: auto;
 }
 
 .breadcrumb-custom {
