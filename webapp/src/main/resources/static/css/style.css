@@ -646,7 +646,7 @@ h1, h2, h3, h4, h5,
 
 /* Blocks */
 .site-blocks-cover {
-  background: url('../images/storefront/central.jpg');
+  background: url('../images/exchangeR.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top;
@@ -674,8 +674,6 @@ h1, h2, h3, h4, h5,
 .site-blocks-cover h1 {
   font-size: 5rem;
   font-weight: 400;
-  /*color: #fff;*/
-  color: #fff2e0;
   font-weight: 900; }
 @media (max-width: 991.98px) {
   .site-blocks-cover h1 {
