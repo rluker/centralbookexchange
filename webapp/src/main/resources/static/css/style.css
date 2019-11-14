@@ -59,8 +59,8 @@ h1, h2, h3, h4, h5,
 .bg-leather { background: var(--leather); }
 .bg-mint { background: var(--mint); }
 .bg-sea { background: var(--sea); }
-.bg-black { background: black; }
-.bg-white { background: white; }
+.bg-b { background: black; }
+.bg-w { background: white; }
 
 .text-cream { color: var(--cream); }
 .text-red { color: var(--deep-red); }  
@@ -70,8 +70,8 @@ h1, h2, h3, h4, h5,
 .text-leather { color: var(--leather); }
 .text-mint { color: var(--mint); }
 .text-sea { color: var(--sea); }
-.text-white { color: white; }
-.text-black { color: black; }
+.text-w { color: white; }
+.text-b { color: black; }
 
 .ff-NG{ font-family: 'Nanum Gothic', sans-serif; font-size: 4em; }
 .ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
