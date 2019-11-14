@@ -368,7 +368,8 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu .active {
   color: var(--deep-red);
   display: inline-block;
-  padding-right: 10px;
+  padding-left: 10px;
+  padding-right: 20px;
 }
 .site-navbar .site-navigation .site-menu a {
   text-decoration: none ;
@@ -376,10 +377,12 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block; }
 .site-navbar .site-navigation .site-menu > li > a {
-  padding-right: 10px;
-  color: #000;
+  color: var(--ink);
   display: inline-block;
-  text-decoration: none ; }
+  text-decoration: none ;
+  padding-left: 10px;
+  padding-right: 20px;
+}
 .site-navbar .site-navigation .site-menu > li > a:hover {
   color: var(--deep-red); }
 .site-navbar .site-navigation .site-menu .has-children {
