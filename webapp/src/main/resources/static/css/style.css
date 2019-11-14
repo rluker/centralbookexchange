@@ -38,7 +38,7 @@ a {
 a:link
 { color: var(--deep-red); text-decoration: none; }
 a:visited 
-{ color: var(--grey); -decoration: none; }
+{ color: var(--grey); text-decoration: none; }
 a:hover 
 { text-decoration: underline; }
 a:active{text-decoration: none;}
@@ -50,12 +50,39 @@ h1, h2, h3, h4, h5,
 }
 .border-2 {
   border-width: 2px; }
+  
+.bg-cream { background: var(--cream); }
+.bg-red { background: var(--deep-red); }  
+.bg-ink { background: var(--ink); }
+.bg-grey { background: var(--grey); }
+.bg-sunset { background: var(--sunset); }
+.bg-leather { background: var(--leather); }
+.bg-mint { background: var(--mint); }
+.bg-sea { background: var(--sea); }
+.bg-black { background: black; }
+.bg-white { background: white; }
 
-.text-black {
-  color: #000 ; }
+.text-cream { color: var(--cream); }
+.text-red { color: var(--deep-red); }  
+.text-ink { color: var(--ink); }
+.text-grey { color: var(--grey); }
+.text-sunset { color: var(--sunset); }
+.text-leather { color: var(--leather); }
+.text-mint { color: var(--mint); }
+.text-sea { color: var(--sea); }
+.text-white { color: white; }
+.text-black { color: black; }
 
-.bg-black {
-  background: #000 ; }
+.ff-NG{ font-family: 'Nanum Gothic', sans-serif; font-size: 4em; }
+.ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
+.ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
+.ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
+.ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
+.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
+.ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
+.ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
+.ff-NUL{ font-family: 'Nunito', sans-serif; font-size: .97em; font-weight: 200; }
+
 
 .color-black-opacity-5 {
   color: rgba(0, 0, 0, 0.5); }
@@ -86,6 +113,11 @@ h1, h2, h3, h4, h5,
 .offcanvas-menu .site-wrap:before {
   opacity: 1;
   visibility: visible; }
+  
+.box-shadow
+{
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
 
 .btn {
   text-transform: uppercase;
@@ -686,34 +718,7 @@ h1, h2, h3, h4, h5,
   font-weight: 200;
   font-style: italic; }
 
-.bg-cream { background: var(--cream); }
-.bg-red { background: var(--deep-red); }  
-.bg-ink { background: var(--ink); }
-.bg-grey { background: var(--grey); }
-.bg-sunset { background: var(--sunset); }
-.bg-leather { background: var(--leather); }
-.bg-mint { background: var(--mint); }
-.bg-sea { background: var(--sea); }
 
-.text-cream { color: var(--cream); }
-.text-red { color: var(--deep-red); }  
-.text-ink { color: var(--ink); }
-.text-grey { color: var(--grey); }
-.text-sunset { color: var(--sunset); }
-.text-leather { color: var(--leather); }
-.text-mint { color: var(--mint); }
-.text-sea { color: var(--sea); }
-.text-white { color: white; }
-
-.ff-NG{ font-family: 'Nanum Gothic', sans-serif; font-size: 4em; }
-.ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
-.ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
-.ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
-.ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
-.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
-.ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
-.ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
-.ff-NUL{ font-family: 'Nunito', sans-serif; font-size: .97em; font-weight: 200; }
 
 .feature-blocks-1 {
   position: relative;
@@ -1758,13 +1763,20 @@ h1, h2, h3, h4, h5,
 .footer-subscribe .btn {
   height: 43px; }
 
-.product-item {
+.staff-pick {
   text-align: center; }
-.product-item figure {
+.staff-pick figure {
   overflow: hidden;
   position: relative;
   margin-bottom: 30px; }
-.product-item figure:before {
+.staff-pick a {
+  color: var(--ink);
+}
+.staff-pick a:hover{
+  color: var(--deep-red);
+  text-decoration: none;
+}
+.staff-pick figure:before {
   z-index: 2;
   -webkit-transition: .4s all ease;
   -o-transition: .4s all ease;
@@ -1781,42 +1793,34 @@ h1, h2, h3, h4, h5,
   bottom: 20px;
   opacity: 0;
   visibility: hidden; }
-.product-item figure img {
+.staff-pick figure img {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1); }
-.product-item h3 {
-  font-size: 18px; }
-.product-item h3 a {
-  color: #000; }
-.product-item h3 a:hover {
-  color: #9d1d19; }
-.product-item p {
-  line-height: 1.4;
-  font-size: 13px; }
-.product-item .meta-icons {
+.staff-pick .meta-icons {
   margin-left: 5px;
   margin-bottom: 5px;
   margin-right: 5px;
   font-size: 13px; }
-.product-item .meta-icons a {
+.staff-pick .meta-icons a {
   font-size: 16px;
   position: relative;
   top: 2px; }
-.product-item:hover figure:before {
+  /*
+.staff-pick:hover figure:before {
   opacity: 1;
   visibility: visible;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1); }
-.product-item:hover figure img {
+.staff-pick:hover figure img {
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2); }
-
+*/
 .wishlist span {
   color: #e9ecef;
   -webkit-transition: .3s all ease;
