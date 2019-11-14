@@ -318,6 +318,12 @@ h1, h2, h3, h4, h5,
   top: -5px;
   font-weight: 900; }
 
+.fluid-img
+{
+	width: auto;
+	max-height: 1.8em;
+}
+
 .site-navbar {
   margin-bottom: 0px;
   z-index: 1999;
@@ -330,16 +336,15 @@ h1, h2, h3, h4, h5,
 .site-navbar .site-navigation .site-menu .active {
   color: var(--deep-red);
   display: inline-block;
-  padding-top: 5px;
-  padding-left: 30px;}
+  padding-right: 10px;
+}
 .site-navbar .site-navigation .site-menu a {
   text-decoration: none ;
   display: inline-block; }
 .site-navbar .site-navigation .site-menu > li {
   display: inline-block; }
 .site-navbar .site-navigation .site-menu > li > a {
-  padding-top: 5px;
-  padding-left: 30px;
+  padding-right: 10px;
   color: #000;
   display: inline-block;
   text-decoration: none ; }
@@ -596,6 +601,13 @@ h1, h2, h3, h4, h5,
 .sticky-wrapper .shrink {
   padding-top: 10px ;
   padding-bottom: 10px ; }
+  
+.nav-element
+{
+	padding-left: 15px;
+	margin-left: auto;
+	margin-right: auto;
+} 
 
 /* Blocks */
 .site-blocks-cover {
@@ -1841,7 +1853,7 @@ h1, h2, h3, h4, h5,
 .product-item-2 .price del {
   color: #adb5bd; }
 
-.product-item-2 .number {
+.product-item-2 .shadow-text {
   font-size: 8rem;
   font-weight: 900;
   color: #e9ecef;
