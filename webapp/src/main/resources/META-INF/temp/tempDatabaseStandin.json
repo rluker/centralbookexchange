@@ -1,0 +1,23 @@
+{
+	"items" : 
+	[
+		{
+			"img": "/banners/bannerWarehouse.png",
+			"alt" : "memorynotfound warehouse banner",
+			"name" : "Warehouse Sale Event",
+			"description" : "Warehouse event discription."
+		},
+        {
+			"img": "/banners/bannerHalloween.png",
+			"alt" : "memorynotfound halloween banner",
+			"name" : "Halloween Event",
+			"description" : "Halloween event discription."
+        },
+        {
+			"img": "/banners/bannerReadingNight.png",
+			"alt" : "memorynotfound reading night banner",
+			"name" : "Reading Night",
+			"description" : "Reading night event discription."
+        }
+	]
+}
