@@ -74,12 +74,14 @@ h1, h2, h3, h4, h5,
 .text-b { color: black; }
 
 .ff-NG{ font-family: 'Nanum Gothic', sans-serif; font-size: 4em; }
+.ff-NGH{ font-family: 'Nanum Gothic', sans-serif; font-size: 3em; }
 .ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
+.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 2em; font-weight: 600; }
 .ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
 .ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
-.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
 .ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
+.ff-NS{ font-family: 'Nunito', sans-serif; font-size: 1em; }
 .ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
 .ff-NUL{ font-family: 'Nunito', sans-serif; font-size: .97em; font-weight: 200; }
 
@@ -189,6 +191,11 @@ h1, h2, h3, h4, h5,
 @media (min-width: 768px) {
   .site-section-heading {
     font-size: 3rem; } }
+  
+.navbar-target-container
+{
+	padding-top: 100px;
+}
    
 
 .border-top {
@@ -353,7 +360,7 @@ h1, h2, h3, h4, h5,
 .fluid-img
 {
 	width: auto;
-	max-height: 1.8em;
+	max-height: 1.5em;
 }
 
 .site-navbar {
@@ -623,9 +630,10 @@ h1, h2, h3, h4, h5,
 .sticky-wrapper {
   position: absolute;
   z-index: 100;
-  width: 100%; }
+  width: 100%; 
+  height: auto;}
 .sticky-wrapper + .site-blocks-cover {
-  margin-top: 96px; }
+  margin-top: 100px; }
 .sticky-wrapper .site-navbar {
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
