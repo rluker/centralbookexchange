@@ -12,7 +12,7 @@ import java.util.UUID;
 
 public class Person implements Serializable {
 
-    private final int id;
+    private final UUID id;
     @NotBlank
     private String fName;
     @NotBlank
@@ -20,7 +20,7 @@ public class Person implements Serializable {
     @NotBlank
     private String email;
 
-    public Person(@JsonProperty("id") int id,
+    public Person(@JsonProperty("id") UUID id,
                   @JsonProperty("fName")String fName,
                   @JsonProperty("lName")String lName,
                   @JsonProperty("email")String email) {
@@ -30,7 +30,7 @@ public class Person implements Serializable {
         this.email = email;
     }
 
-    public int getId() {
+    public UUID getId() {
         return id;
     }
 

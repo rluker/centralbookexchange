@@ -19,7 +19,7 @@ public class PersonDataAccessService implements PersonDAO {
     @Override
     public List<Person> selectAllPeople() {
         List<Person> list = new ArrayList<>();
-        list.add(new Person(UUID.randomUUID(), "FROM", "POSTGRES DB"));
+        list.add(new Person(UUID.randomUUID(), "FROM", "POSTGRES DB", "fake@email.com"));
         return list;
     }
 
