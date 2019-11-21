@@ -4,13 +4,15 @@ import com.centralbookexchange.webapp.model.Person;
 import com.centralbookexchange.webapp.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.lang.NonNull;
+import org.springframework.ui.*;
+import org.springframework.validation.*;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping(value = "api/v1/person")
+@RequestMapping(value = "/addEmail", method = RequestMethod.POST)
 @RestController
 public class PersonController {
 
@@ -50,5 +52,12 @@ public class PersonController {
     @PutMapping(path = "{id}")
     public void updatePerson(@Valid @NonNull @RequestBody Person person, @PathVariable("id") UUID id) {
         personService.updatePerson(id, person);
+    }
+
+    @RequestMapping(value = "/addEmail", method = RequestMethod.POST)
+    public String savePerson(@ModelAttribute Person person, BindingResult errors, Model model) {
+        // logic to process input data
+//        model.addAttribute( "person", new Person() );
+        return null;
     }
 }

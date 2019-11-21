@@ -60,7 +60,7 @@
           </div>
           <div class="col-6">
             <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
-            <p class="mb-0 float-right"><span class="mr-3"><span><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2" style="position: relative; top: 2px; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
+            <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2" style="position: relative; top: 2px; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
           </div>
         </div>
       </div> 
@@ -227,7 +227,7 @@
 
       </div>
     </div>
-    
+
     <div class="site-section" id="staff-picks-section">
       <div class="container navbar-target-container">
         <div class="row mb-5 justify-content-center">
@@ -358,11 +358,11 @@
             </div>
           </div>
 
-          
+
         </div>
       </div>
     </div>
-    
+
     
     <!--
     <div class="site-blocks-cover overlay get-notification" id="special-section" th:style="'background: url(/images/storefront/central.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
@@ -383,6 +383,23 @@
       </div>
     </div>
     -->
+
+    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
+      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
+
+        <div class="row align-items-center justify-content-center">
+          <form class="col-md-7" th:action="@{/addEmail}" th:object="${Email}" method="post">
+            <h2 class = "ff-JSO">Get notified about upcoming events!</h2>
+            <div class="d-flex mb-4">
+              <input type="text" th:field="*{email}" class="form-control rounded-0" placeholder="Enter your email address">
+              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
+            </div>
+<!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>-->
+          </form>
+        </div>
+
+      </div>
+    </div>
 
 <!--  old contact form
     <div class="site-section bg-light" id="contact-section" style="background: #8f5100;">
