@@ -22,8 +22,8 @@ public class PersonRepoTest {
     private PersonRepo personRepo;
     @Before
     public void setUp() throws Exception {
-        PersonDB person1= new PersonDB("Alice123", "alice@fake.com");
-        PersonDB person2= new PersonDB("Bob123", "bob@fake.com");
+        PersonDB person1= new PersonDB( "Alice123", "alice@fake.com");
+        PersonDB person2= new PersonDB( "Bob123", "bob@fake.com");
         //save user, verify has ID value after save
         assertNull(person1.getId());
         assertNull(person2.getId());//null before save

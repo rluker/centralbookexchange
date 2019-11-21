@@ -17,6 +17,7 @@ public class CBEApplication {
 
 		try {
 			System.out.println("**************Trying to connect to the database...");
+
 			Connection conn = DriverManager.getConnection((DB_URL));
 			PreparedStatement ps = conn.prepareStatement(
 				"SELECT * FROM person"

@@ -1840,9 +1840,11 @@ h1, h2, h3, h4, h5,
   color: #9d1d19; }
 
 .get-notification {
+  background: url('../images/storefront/mainPic.jpg');
   text-align: center; }
 .get-notification h2 {
-  font-size: 28px;
+  /*font-size: 28px;*/
+  font-size: 3rem;
   color: #fff;
   margin-bottom: 30px; }
 .get-notification .form-control {

@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class PersonDB {
     @Id
 //    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private int id;
     private String fName;
     private String lName;
     private String email;
