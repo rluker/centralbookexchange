@@ -19,15 +19,15 @@ public class Email {
         this.email = email;
     }
 
-    @PostMapping("/addEmail")
-    public String greetingSubmit(@ModelAttribute Email email) {
-        return "result";
-    }
-
-    @GetMapping("/addEmail")
-    public String greetingForm( Model model) {
-        model.addAttribute("email", new Email());
-        return "greeting";
-    }
+//    @PostMapping("/addEmail")
+//    public String greetingSubmit(@ModelAttribute Email email) {
+//        return "result";
+//    }
+//
+//    @GetMapping("/addEmail")
+//    public String greetingForm( Model model) {
+//        model.addAttribute("email", new Email());
+//        return "greeting";
+//    }
 
 }

@@ -48,25 +48,25 @@
       <div class="site-mobile-menu-body"></div>
     </div>
    
-    <div class="top-bar py-3 bg-red text-white ff-JS" id="home-section">
+    <div class="top-bar py-3 bg-red text-cream ff-JS" id="home-section">
       <div class="container">
         <div class="row align-items-center">
          
           <div class="col-6 text-left">
             <ul class="social-media">
-              <li><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook"></span></a></li>
-              <li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram"></span></a></li>
+              <li><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook text-cream"></span></a></li>
+              <li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram text-cream"></span></a></li>
             </ul>
           </div>
           <div class="col-6">
-            <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
-            <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2" style="position: relative; top: 2px; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
+            <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2 text-cream" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
+            <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-cream" style="position: relative; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
           </div>
         </div>
       </div> 
     </div>
 
-    <header class="site-navbar js-sticky-header py-3 site-navbar-target bg-white ff-JSH" role="banner">
+    <header class="site-navbar js-sticky-header py-3 site-navbar-target bg-cream ff-JSH" role="banner">
 
       <div class="container">
         <div class="row align-items-center">
@@ -384,22 +384,24 @@
     </div>
     -->
 
-    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
-      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
+<!--    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">-->
+<!--      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">-->
 
-        <div class="row align-items-center justify-content-center">
-          <form class="col-md-7" th:action="@{/addEmail}" th:object="${Email}" method="post">
-            <h2 class = "ff-JSO">Get notified about upcoming events!</h2>
-            <div class="d-flex mb-4">
-              <input type="text" th:field="*{email}" class="form-control rounded-0" placeholder="Enter your email address">
-              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
-            </div>
-<!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>-->
-          </form>
-        </div>
+<!--        <div class="row align-items-center justify-content-center">-->
+<!--&lt;!&ndash;            th:object="${}"&ndash;&gt;-->
+<!--          <form class="col-md-7" th:action="@{/addEmail}"  method="post">-->
+<!--            <h2 class = "ff-JSO">Get notified about upcoming events!</h2>-->
+<!--            <div class="d-flex mb-4">-->
+<!--&lt;!&ndash;                th:field="*{}"&ndash;&gt;-->
+<!--              <input type="text" class="form-control rounded-0" placeholder="Enter your email address">-->
+<!--              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">-->
+<!--            </div>-->
+<!--&lt;!&ndash;            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>&ndash;&gt;-->
+<!--          </form>-->
+<!--        </div>-->
 
-      </div>
-    </div>
+<!--      </div>-->
+<!--    </div>-->
 
 <!--  old contact form
     <div class="site-section bg-light" id="contact-section" style="background: #8f5100;">
@@ -519,8 +521,19 @@
     </footer>
     
   
-    <div class="sticky-footer text-ink ff-JS">
-    	<p>2017 S 1100 E Salt Lake City, Utah<br>Contact Us: <a href="tel:8014853913">(801)-485-3913</a></p>
+    <div class="sticky-footer text-ink ff-JS bg-cream">
+        <div class="col-6 text-left">
+            <ul class="social-media">
+                <li style="margin-top: 1em;"><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook text-cream"></span></a></li>
+                <li style="margin-top: 1em;"><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram text-cream"></span></a></li>
+            </ul>
+        </div>
+<!--    	<p>2017 S 1100 E Salt Lake City, Utah<br>Contact Us: <a href="tel:8014853913">(801)-485-3913</a></p>-->
+        <p>2017 S 1100 E Salt Lake City, Utah
+            <br>Contact Us: &nbsp;
+            <a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-ink" style="position: relative;"></span></a>
+            <a href="tel:8014853913"><span class="icon-phone mr-2 text-ink" style="position: relative; top: 2px;"></span></a>
+        </p>
     </div>
     
     

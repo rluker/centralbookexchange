@@ -493,7 +493,7 @@ h1, h2, h3, h4, h5,
   right: 0;
   z-index: 2000;
   padding-top: 20px;
-  background: #fff;
+  background: var(--cream);
   height: calc(100vh);
   -webkit-transform: translateX(110%);
   -ms-transform: translateX(110%);
@@ -1905,7 +1905,7 @@ h1, h2, h3, h4, h5,
 	position: sticky;
     bottom: 1%;
     height: 4em;
-    background-color: rgba(252, 249, 242, 0.9);
+    /*background-color: rgba(252, 249, 242, 0.9);*/
     -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); 
 }
