@@ -1,0 +1,7 @@
+
+DROP TABLE IF EXISTS test_model;
+CREATE TABLE test_model (
+  id INT NOT NULL AUTO_INCREMENT,
+  name VARCHAR(100) NOT NULL,
+  datecreated DATE NOT NULL,
+  PRIMARY KEY (id));

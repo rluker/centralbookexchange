@@ -215,10 +215,11 @@
       <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
 
         <div class="row align-items-center justify-content-center">
-          <form class="col-md-7" method="post">
+<!--          <form class="col-md-7" method="post">-->
+          <form th:action="@{/}" th:object="${email}" method="post" class="col-md-7">
             <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
             <div class="d-flex py-4">
-              <input type="text" class="form-control rounded-0" placeholder="Enter your email address">
+              <input type="text" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
               <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
             </div>
 <!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>-->
