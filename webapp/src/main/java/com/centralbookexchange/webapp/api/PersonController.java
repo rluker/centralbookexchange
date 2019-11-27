@@ -12,13 +12,11 @@ import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
-@RequestMapping(value = "/addEmail", method = RequestMethod.POST)
-@RestController
 public class PersonController {
 
     private final PersonService personService;
 
-    @Autowired
+
     public PersonController(PersonService personService) {
         this.personService = personService;
     }
@@ -52,12 +50,5 @@ public class PersonController {
     @PutMapping(path = "{id}")
     public void updatePerson(@Valid @NonNull @RequestBody Person person, @PathVariable("id") UUID id) {
         personService.updatePerson(id, person);
-    }
-
-    @RequestMapping(value = "/addEmail", method = RequestMethod.POST)
-    public String savePerson(@ModelAttribute Person person, BindingResult errors, Model model) {
-        // logic to process input data
-//        model.addAttribute( "person", new Person() );
-        return null;
     }
 }

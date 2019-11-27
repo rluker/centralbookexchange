@@ -385,24 +385,21 @@
     </div>
     -->
 
-<!--    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">-->
-<!--      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">-->
+   <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
+     <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
+       <div class="row align-items-center justify-content-center">
+       
+         <form class="col-md-7" th:action="@{subscribe}" th:object="${email}" method="post">
+           <h2 class = "ff-JSO text-cream mb-4">Get notified about upcoming events!</h2>
+           <div class="d-flex mb-4">
+             <input type="text" th:field="*{userEmail}" class="form-control rounded-0" placeholder="Enter your email address">
+             <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
+           </div>
+         </form>
+       </div>
 
-<!--        <div class="row align-items-center justify-content-center">-->
-<!--&lt;!&ndash;            th:object="${}"&ndash;&gt;-->
-<!--          <form class="col-md-7" th:action="@{/addEmail}"  method="post">-->
-<!--            <h2 class = "ff-JSO">Get notified about upcoming events!</h2>-->
-<!--            <div class="d-flex mb-4">-->
-<!--&lt;!&ndash;                th:field="*{}"&ndash;&gt;-->
-<!--              <input type="text" class="form-control rounded-0" placeholder="Enter your email address">-->
-<!--              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">-->
-<!--            </div>-->
-<!--&lt;!&ndash;            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>&ndash;&gt;-->
-<!--          </form>-->
-<!--        </div>-->
-
-<!--      </div>-->
-<!--    </div>-->
+     </div>
+   </div>
 
 <!--  old contact form
     <div class="site-section bg-light" id="contact-section" style="background: #8f5100;">

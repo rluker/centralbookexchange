@@ -14,7 +14,7 @@ import java.util.UUID;
  * This class includes the logic of the application.
  */
 
-@Service
+//@Service
 public class PersonService {
 
     private final PersonDAO personDAO;
@@ -23,7 +23,7 @@ public class PersonService {
      * Change the 'fakeDao' @Qualifier to where your database is coming from.
      * Connects to an implementation of a DAO through the @Repository tag.
      */
-    @Autowired
+ //   @Autowired
     public PersonService(@Qualifier("fakeDao") PersonDAO personDAO) {
         this.personDAO = personDAO;
     }

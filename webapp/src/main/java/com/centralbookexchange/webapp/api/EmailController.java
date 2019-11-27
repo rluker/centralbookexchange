@@ -1,45 +1,38 @@
 package com.centralbookexchange.webapp.api;
 
-import javax.validation.constraints.*;
-import org.springframework.stereotype.*;
-import org.springframework.ui.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.centralbookexchange.webapp.db.EmailRepository;
 import com.centralbookexchange.webapp.model.Email;
+import com.centralbookexchange.webapp.model.Greeting;
 
-@Controller
-public class EmailController {
+public class EmailController 
+{
 
-    @NotBlank
-    private String email;
-
-    @Controller
-    public class MyController {
-
-        // TODO: For some reason this throws a builder error with the requestHandlerMapping
-//        @GetMapping("/")
-//        public String showPage(Model model) {
-//            model.addAttribute("userEmail", new Email());
-//            return "/";
-//        }
+//	@Autowired 
+//	private EmailRepository emails;
 //
-//        @PostMapping("/")
-//        public String showPage(@ModelAttribute("userEmail") Email bean) {
-//
-//            System.out.println("Email: " + bean.getEmail()); //in reality, you'd use a logger instead :)
-//            return "redirect:index";
-//        }
-    }
-
-
-    //    @PostMapping("/addEmail")
-    //    public String greetingSubmit(@ModelAttribute Email email) {
-    //        return "result";
-    //    }
-    //
-    //    @GetMapping("/addEmail")
-    //    public String greetingForm( Model model) {
-    //        model.addAttribute("email", new Email());
-    //        return "greeting";
-    //    }
+//    //@RequestMapping(value = "/email", method = RequestMethod.POST)
+//    @GetMapping("/subscribe")
+//    public String form(Model model)
+//    {
+//    	if(!model.containsAttribute("email"))
+//    	{
+//        	model.addAttribute("email", new Email());
+//    	}
+//        return "index";
+//    }
+//	
+//    @PostMapping("/subscribe") 
+//	public String addNewUser (@ModelAttribute String userEmail) 
+//    {
+//    	emails.save(new Email(userEmail));
+//		return "redirect:index";
+//	}
 
 }

@@ -1,33 +1,41 @@
 package com.centralbookexchange.webapp.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.centralbookexchange.webapp.db.EmailRepository;
+import com.centralbookexchange.webapp.model.Email;
+import com.centralbookexchange.webapp.model.Greeting;
+
 
 @Controller
 public class IndexController
 {
-    @RequestMapping("/")
-    public String index()
-    {
-        return "index";
-    }
+	@Autowired 
+	private EmailRepository emails;
 
     @GetMapping("/")
-    public ModelAndView getNumBooks()
+    public String index(Model model)
     {
-        ModelAndView mav = new ModelAndView(index());
-        mav.addObject("numOfBooks", "1234");
-        return mav;
+    	if(!model.containsAttribute("email"))
+    	{
+        	model.addAttribute("email", new Email());
+    	}
+        return "index";
     }
     
-    @GetMapping("/index")
-    public ModelAndView getNumBooks2()
+    @PostMapping("/")
+	public String addEmail(@RequestParam String userEmail) 
     {
-        ModelAndView mav = new ModelAndView(index());
-        mav.addObject("numOfBooks", "1234");
-        return mav;
-    }
+    	emails.save(new Email(userEmail));
+		return "redirect:/";
+	}
 
 }
