@@ -10,7 +10,7 @@
   <groupId>com.centralbookexchange</groupId>
   <artifactId>webapp</artifactId>
   <name>webapp</name>
-  <version>0.0.2</version>
+  <version>0.0.3</version>
   <description>Central Book Exchange project using Spring Boot framework</description>
   <build>
     <plugins>
