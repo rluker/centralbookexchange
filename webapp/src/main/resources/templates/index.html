@@ -389,11 +389,11 @@
      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
        <div class="row align-items-center justify-content-center">
        
-         <form class="col-md-7" th:action="@{subscribe}" th:object="${email}" method="post">
+         <form class="col-md-7" th:action="@{/}" th:object="${email}" method="post">
            <h2 class = "ff-JSO text-cream mb-4">Get notified about upcoming events!</h2>
            <div class="d-flex mb-4">
              <input type="text" th:field="*{userEmail}" class="form-control rounded-0" placeholder="Enter your email address">
-             <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
+             <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
            </div>
          </form>
        </div>
