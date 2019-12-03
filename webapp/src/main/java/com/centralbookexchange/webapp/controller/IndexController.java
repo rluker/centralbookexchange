@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.centralbookexchange.webapp.db.EmailRepository;
+import com.centralbookexchange.webapp.db.CBERepository;
 import com.centralbookexchange.webapp.model.Email;
 
 
@@ -15,7 +15,7 @@ import com.centralbookexchange.webapp.model.Email;
 public class IndexController
 {
 	@Autowired 
-	private EmailRepository emails;
+	private CBERepository repo;
 
     @GetMapping("/")
     public String index(Model model)
@@ -30,7 +30,7 @@ public class IndexController
     @PostMapping("/")
 	public String addEmail(@RequestParam String userEmail) 
     {
-    	emails.save(new Email(userEmail));
+    	repo.save(new Email(userEmail));
 		return "redirect:/";
 	}
 

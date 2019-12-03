@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 import com.centralbookexchange.webapp.model.Email;
 
 @Repository
-public class EmailRepository
+public class CBERepository
 {
 	@Autowired
 	private JdbcTemplate db;

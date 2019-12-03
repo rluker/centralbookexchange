@@ -77,10 +77,12 @@ h1, h2, h3, h4, h5,
 .ff-NGH{ font-family: 'Nanum Gothic', sans-serif; font-size: 3em; }
 .ff-JSL{ font-family: 'Julius Sans One', sans-serif; font-size: 3em; font-weight: 700; }
 .ff-JSO{ font-family: 'Julius Sans One', sans-serif; font-size: 2.5em; }
-.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 2em; font-weight: 600; }
+.ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
+.ff-JSW{ font-family: 'Julius Sans One', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
 .ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
+.ff-NW{ font-family: 'Nunito', sans-serif; font-size: 1.1em; }
 .ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
 .ff-NS{ font-family: 'Nunito', sans-serif; font-size: 1em; }
 .ff-NL{ font-family: 'Nunito', sans-serif; font-size: 1em; font-weight: 300; }
