@@ -5,7 +5,7 @@
 	<groupId>com.centralbookexchange</groupId>
 	<artifactId>webapp</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.2</version>
+	<version>0.0.3</version>
 	<name>webapp</name>
 	<description>Central Book Exchange project using Spring Boot framework</description>
 
