@@ -7,9 +7,7 @@
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Nanum+Gothic|Nunito&display=swap" rel="stylesheet"> 
-
 	<link rel="apple-touch-icon" sizes="180x180" th:href="@{/images/favicon/apple-touch-icon.png}"/>
 	<link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon/favicon-32x32.png}"/>
 	<link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon/favicon-16x16.png}"/>
@@ -17,17 +15,13 @@
 	<link rel="mask-icon" th:href="@{/images/favicon/safari-pinned-tab.svg}" color="#5bbad5"/>
 	<meta name="msapplication-TileColor" content="#da532c"/>
 	<meta name="theme-color" content="#ffffff"/>
-
     <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-
     <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}">
-
     <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
     <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
     <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
     <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
     <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css/}">
-
     <link rel="stylesheet" th:href="@{/css/jquery.fancybox.min.css}">
     <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker.css}">
     <link rel="stylesheet" th:href="@{/fonts/flaticon/font/flaticon.css}">
@@ -214,19 +208,18 @@
       <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
 
         <div class="row align-items-center justify-content-center">
-<!--          <form class="col-md-7" method="post">-->
-          <form th:action="@{/}" th:object="${email}" method="post" class="col-md-7">
+          <form action="/" method="post" class="col-md-7">
             <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
             <div class="d-flex py-4">
               <input type="text" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
-              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="Subscribe">
+              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
             </div>
-<!--            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat commodi veniam doloremque ducimus tempora.</p>-->
           </form>
         </div>
 
       </div>
     </div>
+
 
     <div class="site-section" id="staff-picks-section">
       <div class="container navbar-target-container">
@@ -362,23 +355,6 @@
         </div>
       </div>
     </div>
-
-
-   <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
-     <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
-       <div class="row align-items-center justify-content-center">
-       
-         <form class="col-md-7" th:action="@{/}" th:object="${email}" method="post">
-           <h2 class = "ff-JSO text-cream mb-4">Get notified about upcoming events!</h2>
-           <div class="d-flex mb-4">
-             <input type="text" th:field="*{userEmail}" class="form-control rounded-0" placeholder="Enter your email address">
-             <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
-           </div>
-         </form>
-       </div>
-
-     </div>
-   </div>
 
 <!--  old contact form
     <div class="site-section bg-light" id="contact-section" style="background: #8f5100;">
