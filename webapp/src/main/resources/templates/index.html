@@ -42,21 +42,21 @@
       <div class="site-mobile-menu-body"></div>
     </div>
    
-    <div class="top-bar py-3 bg-red text-cream ff-JS" id="home-section">
+    <div class="top-bar py-1 bg-red text-cream ff-JS" id="home-section">
       <div class="container">
-        <div class="row align-items-center">
+<!--        <div class="row align-items-center">
          
           <div class="col-6 text-left">
             <ul class="social-media">
-              <li><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook text-cream"></span></a></li>
-              <li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram text-cream"></span></a></li>
+              <li><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook"></span></a></li>
+              <li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram"></span></a></li>
             </ul>
           </div>
           <div class="col-6">
-            <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2 text-cream" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
-            <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-cream" style="position: relative; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
+            <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2 text-white" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
+            <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-white" style="position: relative; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
           </div>
-        </div>
+    -->     </div>
       </div> 
     </div>
 
@@ -96,7 +96,7 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
                         
             <div class="row mb-4">
-              <div class="col-md-8" th:style="'background: rgb(6,6,8,0.80); box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.49)'">
+              <div class="col-md-9" th:style="'background: rgb(6,6,8,0.80); box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.49)'">
                 <h1 class="ff-JSW text-cream">Welcome</h1>
                 <p class="mb-4 text-white ff-NW">We are an independently-owned new and used bookstore located in Salt Lake City, Utah. 
                   We have over 90,000 items in our constantly-changing inventory, and we catalog an additional 1,000+ books per week. 
@@ -450,13 +450,7 @@
               </div>
             </div>
           </div>
-          <div class="col-md-3 ml-auto">
-            <h2 class="footer-heading mb-4">Featured Product</h2>
-            <a href="#"><img th:src="@{/images/books/book.png}" alt="Image" class="img-fluid mb-3"></a>
-            <h4 class="h5">Book Lorem Ipsum</h4>
-            <strong class="text-black mb-3 d-inline-block">$60.00</strong>
-            <p><a href="#" class="btn btn-black rounded-0">Add to Cart</a></p>
-          </div>
+          
         </div>
         <div class="row pt-5 mt-5 text-center">
           <div class="col-md-12">
@@ -474,21 +468,26 @@
     </footer>
     
   
-    <div class="sticky-footer text-ink ff-JS bg-cream">
-        <div class="col-6 text-left">
-            <ul class="social-media">
-                <li style="margin-top: 1em;"><a href="https://www.facebook.com/CentralBookExchange" class=""><span class="icon-facebook text-cream"></span></a></li>
-                <li style="margin-top: 1em;"><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram text-cream"></span></a></li>
-            </ul>
-        </div>
-<!--    	<p>2017 S 1100 E Salt Lake City, Utah<br>Contact Us: <a href="tel:8014853913">(801)-485-3913</a></p>-->
-        <p>2017 S 1100 E Salt Lake City, Utah
-            <br>Contact Us: &nbsp;
-            <a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-ink" style="position: relative;"></span></a>
-            <a href="tel:8014853913"><span class="icon-phone mr-2 text-ink" style="position: relative; top: 2px;"></span></a>
-        </p>
+    <div class="sticky-footer text-ink ff-JSB bg-cream">
+    	<div class="container">
+    		<div class="row align-items-center py-4">
+        		<div class="col-6 text-left">
+            		<ul class="social-media">
+              			<li><a href="https://www.facebook.com/CentralBookExchange" class="mr-1"><span class="icon-facebook"></span></a></li>
+              			<li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram"></span></a></li>
+            		</ul>
+        		</div>
+        
+       	 		<div class="col-6 text-right">
+            		<p class="float-right">2017 S. 1100 E. SLC, UT
+            			<a href="tel:8014853913" class="icon-phone mr-3 ml-3 text-ink"></a>
+            			<a href="mailto:customerservice@citywbooks.com" class="icon-envelope text-ink"></a>
+            		</p>
+
+      			</div>
+      		</div>
+      	</div>
     </div>
-    
     
   </div> <!-- .site-wrap -->
 
@@ -504,9 +503,7 @@
   <script th:src="@{/js/jquery.easing.1.3.js}"></script>
   <script th:src="@{/js/aos.js}"></script>
   <script th:src="@{/js/jquery.fancybox.min.js}"></script>
-  <script th:src="@{/js/jquery.sticky.js}"></script>
-
-  
+  <script th:src="@{/js/jquery.sticky.js}"></script>  
   <script th:src="@{/js/main.js}"></script>
     
   </body>
