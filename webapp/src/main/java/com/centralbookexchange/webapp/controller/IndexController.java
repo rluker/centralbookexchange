@@ -26,6 +26,7 @@ public class IndexController
     	ModelAndView model = new ModelAndView("index");
     	model.addObject("email", new Email());
     	model.addObject("eventsList", repo.getAllEvents());
+    	model.addObject("bannerList", repo.getAllBanners());
         return model;
     }
     

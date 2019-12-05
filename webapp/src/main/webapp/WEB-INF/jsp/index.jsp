@@ -1,6 +1,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.centralbookexchange.webapp.model.Event" %>
+<%@ page import="com.centralbookexchange.webapp.model.Banner" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -55,7 +56,8 @@
             <p class="mb-0 float-right"><span class="mr-3"><a href="tel:8014853913"> <span class="icon-phone mr-2 text-white" style="position: relative; top: 2px; color: white"></span><span class="d-none d-lg-inline-block text-cream">(801)-485-3913</span></a></span></p>
             <p class="mb-0 float-right"><span class="mr-3"><a href="mailto:skd1018@westminstercollege.edu"><span class="icon-envelope mr-2 text-white" style="position: relative; color: white;"></span><span class="d-none d-lg-inline-block text-cream">customerservice@citywbooks.com</span></a></span></p>
           </div>
-    -->     </div>
+    -->     
+    	</div>
       </div> 
     </div>
 
@@ -124,37 +126,45 @@
         </div>
       </div>
       <div class="slide-one-item home-slider owl-carousel">
-          <div>
-            <div class="event-banner">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="/banners/bannerWarehouse.png" alt="memorynotfound warehouse banner" class="mb-3"></div>
-              </figure>             
-            </div>
-            <p></p>
-            <p class="text-grey ff-N">Event details.</p> 
-          </div>
           
-          <div>
-            <div class="event-banner">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="/banners/bannerHalloween.png" alt="memorynotfound halloween banner" class="mb-3"></div>
-              </figure>       
-            </div>
-            <p></p>
-            <p class="text-grey ff-N">Event details.</p>       
-          </div>
-
-          <div>
-            <div class="event-banner">
-              <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img src="/banners/bannerReadingNight.png" alt="memorynotfound reading night banner" class="mb-3"></div>
-              </figure>
-            </div>
-            <p></p>
-            <p class="text-grey ff-N">Event details.</p>              
-          </div>
+			<% 
+				List<Banner> bannerList = (List<Banner>) request.getAttribute("bannerList"); 
+             	for(int i = 0; i < bannerList.size(); i++)
+             	{
+             		String eventName = bannerList.get(i).getBaseEvent().getName();
+             		request.setAttribute("bannerImagePath", "/banners/" + eventName + ".png");
+             		%>
+             
+             		<div>
+            			<div class="event-banner">
+              				<figure class="mb-4 d-block align-items-center justify-content-center">
+              					<div><img src="${bannerImagePath}" alt=<%= eventName %> class="mb-3"></div>
+              				</figure> 
+              			</div>  
+              			<!-- 
+              			<p></p>
+            			<p class="text-grey ff-N">Event details.</p> 
+              			 -->
+              		</div>
+               	<% }%>
 
         </div>
+    </div>
+    
+    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
+      <div class="container" style="'background: rgb(0,0,0,0.3);'">
+
+        <div class="row align-items-center justify-content-center">
+          <form action="/" method="post" class="col-md-7">
+            <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
+            <div class="d-flex py-4">
+              <input type="email" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
+              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
+            </div>
+          </form>
+        </div>
+
+      </div>
     </div>
 
     <div class="site-section bg-light" id="event-details">
@@ -170,8 +180,7 @@
 				
 				<% 
 					List<Event> eventList = (List<Event>) request.getAttribute("eventsList"); 
-                	int numEvents = eventList.size();
-                	for(int i = 0; i < numEvents; i++)
+                	for(int i = 0; i < eventList.size(); i++)
                 	{
                 		Event currentEvent = eventList.get(i);
                 		String currentName = currentEvent.getName();
@@ -195,7 +204,7 @@
 
 							<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
 					<% }%>
-								<span class="shadow-text"><%= i %></span>
+								<span class="shadow-text"></span>
 								<h3 class="text-ink mb-4 ff-NSB"><%= currentName %></h3>
 								<p class="mb-4"><%= currentEvent.getDescription() %></p>
 							</div>	
@@ -203,29 +212,8 @@
 					</div>
 					
 				<%} %>
-
-	
 			</div>
-	
-
-
 		</div>
-    </div>
-    
-    <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
-      <div class="container" style="'background: rgb(0,0,0,0.3);'">
-
-        <div class="row align-items-center justify-content-center">
-          <form action="/" method="post" class="col-md-7">
-            <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
-            <div class="d-flex py-4">
-              <input type="email" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
-              <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
-            </div>
-          </form>
-        </div>
-
-      </div>
     </div>
 
     <div class="site-section" id="staff-picks-section">
