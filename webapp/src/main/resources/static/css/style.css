@@ -639,13 +639,11 @@ h1, h2, h3, h4, h5,
   height: auto !important;}
 .sticky-wrapper + .site-blocks-cover {
   margin-top: 100px; }
-.sticky-wrapper .site-navbar {
-  -webkit-transition: .3s all ease;
-  -o-transition: .3s all ease;
-  transition: .3s all ease; }
+
 .sticky-wrapper.is-sticky .site-navbar {
   -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
   box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); 
+  border-top: .25em solid var(--deep-red);
   border-bottom: .25em solid var(--deep-red);
   }
 .sticky-wrapper .shrink {
