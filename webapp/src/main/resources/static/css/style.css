@@ -692,6 +692,12 @@ h1, h2, h3, h4, h5,
   	font-size: .8rem;
   }  }
 
+.wel-col
+{
+	background: rgb(6,6,8,0.80); 
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.49);
+}
+
 .site-blocks-cover .intro-text {
   font-size: 16px;
   line-height: 1.5; }

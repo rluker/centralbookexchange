@@ -1,32 +1,29 @@
+<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:th="http://www.thymeleaf.org"
-      lang="en">
+<html lang="en">
   <head>
     <title>Central Book Exchange</title>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Nanum+Gothic|Nunito&display=swap" rel="stylesheet"> 
-	<link rel="apple-touch-icon" sizes="180x180" th:href="@{/images/favicon/apple-touch-icon.png}"/>
-	<link rel="icon" type="image/png" sizes="32x32" th:href="@{/images/favicon/favicon-32x32.png}"/>
-	<link rel="icon" type="image/png" sizes="16x16" th:href="@{/images/favicon/favicon-16x16.png}"/>
-	<link rel="manifest" th:href="@{/images/favicon/site.webmanifest}"/>
-	<link rel="mask-icon" th:href="@{/images/favicon/safari-pinned-tab.svg}" color="#5bbad5"/>
-	<meta name="msapplication-TileColor" content="#da532c"/>
-	<meta name="theme-color" content="#ffffff"/>
-    <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
-    <link rel="stylesheet" th:href="@{/fonts/icomoon/style.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
-    <link rel="stylesheet" th:href="@{/css/jquery-ui.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.carousel.min.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css}">
-    <link rel="stylesheet" th:href="@{/css/owl.theme.default.min.css/}">
-    <link rel="stylesheet" th:href="@{/css/jquery.fancybox.min.css}">
-    <link rel="stylesheet" th:href="@{/css/bootstrap-datepicker.css}">
-    <link rel="stylesheet" th:href="@{/fonts/flaticon/font/flaticon.css}">
-    <link rel="stylesheet" th:href="@{/css/aos.css}">
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+	<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png"/>
+	<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png"/>
+	<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png"/>
+	<link rel="manifest" href="/images/favicon/site.webmanifest"/>
+	<link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5"/>
+	<meta name="msapplication-TileColor" content="#da532c"/>	<meta name="theme-color" content="#ffffff"/>
+    <link rel="stylesheet" href="/fonts/icomoon/style.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/jquery-ui.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css/">
+    <link rel="stylesheet" href="/css/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="/fonts/flaticon/font/flaticon.css">
+    <link rel="stylesheet" href="/css/aos.css">
+    <link rel="stylesheet" href="/css/style.css">
     
   </head>
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
@@ -65,7 +62,7 @@
       <div class="container">
         <div class="row align-items-center">
           <div class="col-6 col-xl-2">
-            <h1 class="mb-0 site-logo"><a href="/index.html" class="mb-0"><img th:src="@{/images/logos/og_logo.png}" class="fluid-img" ><span class="text-primary"></span> </a></h1>
+             <h1 class="mb-0 site-logo"><a href="/" class="mb-0"><img src="/images/logos/og_logo.png" class="fluid-img" ><span class="text-primary"></span> </a></h1>
           </div>
           <div class="col-12 col-md-10 d-none d-xl-block">
             <nav class="site-navigation position-relative text-left" role="navigation">
@@ -81,13 +78,12 @@
           </div>
 
 
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3" style="position: relative; top: 3px;"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3 position-relative"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
 
         </div>
       </div>
       
     </header>
-
      
     <div class="site-blocks-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
       <div class="container">
@@ -96,7 +92,7 @@
           <div class="col-md-12" data-aos="fade-up" data-aos-delay="400">
                         
             <div class="row mb-4">
-              <div class="col-md-9" th:style="'background: rgb(6,6,8,0.80); box-shadow: 0 4px 8px 0 rgba(0, 0, 0), 0 6px 20px 0 rgba(0, 0, 0, 0.49)'">
+              <div class="col-md-9 wel-col">
                 <h1 class="ff-JSW text-cream">Welcome</h1>
                 <p class="mb-4 text-white ff-NW">We are an independently-owned new and used bookstore located in Salt Lake City, Utah. 
                   We have over 90,000 items in our constantly-changing inventory, and we catalog an additional 1,000+ books per week. 
@@ -117,7 +113,6 @@
       </div>
     </div>  
 
-
     <div class="site-section event-wrap" id="events-section">
       <div class="container navbar-target-container">
         <div class="row mb-4">
@@ -131,7 +126,7 @@
           <div>
             <div class="event-banner">
               <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img th:src="@{/banners/bannerWarehouse.png}" alt="memorynotfound warehouse banner" class="mb-3"></div>
+                <div><img src="/banners/bannerWarehouse.png" alt="memorynotfound warehouse banner" class="mb-3"></div>
               </figure>             
             </div>
             <p></p>
@@ -141,7 +136,7 @@
           <div>
             <div class="event-banner">
               <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img th:src="@{/banners/bannerHalloween.png}" alt="memorynotfound halloween banner" class="mb-3"></div>
+                <div><img src="/banners/bannerHalloween.png" alt="memorynotfound halloween banner" class="mb-3"></div>
               </figure>       
             </div>
             <p></p>
@@ -151,7 +146,7 @@
           <div>
             <div class="event-banner">
               <figure class="mb-4 d-block align-items-center justify-content-center">
-                <div><img th:src="@{/banners/bannerReadingNight.png}" alt="memorynotfound reading night banner" class="mb-3"></div>
+                <div><img src="/banners/bannerReadingNight.png" alt="memorynotfound reading night banner" class="mb-3"></div>
               </figure>
             </div>
             <p></p>
@@ -169,49 +164,75 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
           </div>
         </div>
-        <div class="bg-white py-4 mb-4">
-          <div class="row mx-4 my-4 product-item-2 align-items-start">
-            <div class="col-md-6 mb-5 mb-md-0">
-              <img th:src="@{/images/bookshelves/cbe_0040.JPG}" alt="Image" class="img-fluid">
-            </div>
-           
-            <div class="col-md-5 ml-auto product-title-wrap">
-              <span class="shadow-text">A</span>
-              <h3 class="text-ink mb-4 ff-NSB">Event A</h3>
-              <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
-              
-            </div>
-          </div>
-        </div>
 
-        <div class="bg-white py-4">
-          <div class="row mx-4 my-4 product-item-2 align-items-start">
-            <div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-              <img th:src="@{/images/bookshelves/cbe_0040.JPG}" alt="Image" class="img-fluid">
-            </div>
-           
-            <div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
-              <span class="shadow-text">B</span>
-              <h3 class="text-ink mb-4 ff-NSB">Event B</h3>
-              <p class="mb-4">Et tempora id nostrum saepe amet doloribus deserunt totam officiis cupiditate asperiores quasi accusantium voluptatum dolorem quae sapiente voluptatem ratione odio iure blanditiis earum fuga molestiae alias dicta perferendis inventore!</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus soluta assumenda sed optio, error at?</p>
-              
-            </div>
-          </div>
-        </div>
 
-      </div>
+
+			<div id="generated-events">
+				
+				<c:forEach var = "i" begin = "1" end = "5">
+        			Item <c:out value = "${i}"/><p>
+      			</c:forEach>
+      			
+
+
+				<div class="bg-white py-4 mb-4">
+					<div class="row mx-4 my-4 product-item-2 align-items-start">
+						<div class="col-md-6 mb-5 mb-md-0">
+							<img src="/images/bookshelves/cbe_0040.JPG" alt="Image" class="img-fluid">
+						</div>
+
+						<div class="col-md-5 ml-auto product-title-wrap">
+							<span class="shadow-text">A</span>
+							<h3 class="text-ink mb-4 ff-NSB">Event A</h3>
+							<p class="mb-4">Et tempora id nostrum saepe amet doloribus
+								deserunt totam officiis cupiditate asperiores quasi accusantium
+								voluptatum dolorem quae sapiente voluptatem ratione odio iure
+								blanditiis earum fuga molestiae alias dicta perferendis
+								inventore!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Ducimus soluta assumenda sed optio, error at?</p>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="bg-white py-4">
+					<div class="row mx-4 my-4 product-item-2 align-items-start">
+						<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
+							<img src="/images/bookshelves/cbe_0040.JPG" alt="Image" class="img-fluid">
+						</div>
+
+						<div
+							class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
+							<span class="shadow-text">B</span>
+							<h3 class="text-ink mb-4 ff-NSB">Event B</h3>
+							<p class="mb-4">Et tempora id nostrum saepe amet doloribus
+								deserunt totam officiis cupiditate asperiores quasi accusantium
+								voluptatum dolorem quae sapiente voluptatem ratione odio iure
+								blanditiis earum fuga molestiae alias dicta perferendis
+								inventore!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+								Ducimus soluta assumenda sed optio, error at?</p>
+
+						</div>
+					</div>
+				</div>
+
+			</div>
+	
+
+
+		</div>
     </div>
     
     <div class="site-blocks-cover inner-page-cover overlay get-notification"  style="'background: url(/images/storefront/mainPic.jpg)  no-repeat 50% fixed / cover;'" data-aos="fade">
-      <div class="container" th:style="'background: rgb(0,0,0,0.3);'">
+      <div class="container" style="'background: rgb(0,0,0,0.3);'">
 
         <div class="row align-items-center justify-content-center">
           <form action="/" method="post" class="col-md-7">
             <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
             <div class="d-flex py-4">
-              <input type="text" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
+              <input type="email" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
               <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
             </div>
           </form>
@@ -219,7 +240,6 @@
 
       </div>
     </div>
-
 
     <div class="site-section" id="staff-picks-section">
       <div class="container navbar-target-container">
@@ -234,7 +254,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book.png}" alt="book" class="img-fluid">
+                <img src="/images/books/book.png" alt="book" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book</a></h3>
@@ -254,7 +274,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book1.png}" alt="book 1" class="img-fluid">
+                <img src="/images/books/book1.png" alt="book 1" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book One</a></h3>
@@ -274,7 +294,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book2.png}" alt="book 2" class="img-fluid">
+                <img src="/images/books/book2.png" alt="book 2" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Two</a></h3>
@@ -294,7 +314,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book3.png}" alt="book 3" class="img-fluid">
+                <img src="/images/books/book3.png" alt="book 3" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Three</a></h3>
@@ -314,7 +334,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book4.png}" alt="book 4" class="img-fluid">
+                <img src="/images/books/book4.png" alt="book 4" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Four</a></h3>
@@ -334,7 +354,7 @@
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
-                <img th:src="@{/images/books/book5.png}" alt="book 5" class="img-fluid">
+                <img src="/images/books/book5.png" alt="book 5" class="img-fluid">
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Five</a></h3>
@@ -355,75 +375,6 @@
         </div>
       </div>
     </div>
-
-<!--  old contact form
-    <div class="site-section bg-light" id="contact-section" style="background: #8f5100;">
-      <div class="container">
-        <div class="row mb-5">
-          <div class="col-12 text-center">
-            <h3 class="section-sub-title">Contact Form</h3>
-            <h2 class="section-title mb-3">Get In Touch</h2>
-          </div>
-        </div>
-        <div class="row justify-content-center">
-          <div class="col-md-7 mb-5">
-
-            
-
-            <form action="#" class="p-5 bg-white" style="background: #fff2e0;">
-              
-              <h2 class="h4 text-black mb-5">Contact Form</h2> 
-
-              <div class="row form-group">
-                <div class="col-md-6 mb-3 mb-md-0">
-                  <label class="text-black" for="fname">First Name</label>
-                  <input type="text" id="fname" class="form-control rounded-0">
-                </div>
-                <div class="col-md-6">
-                  <label class="text-black" for="lname">Last Name</label>
-                  <input type="text" id="lname" class="form-control rounded-0">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="email">Email</label> 
-                  <input type="email" id="email" class="form-control rounded-0">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                
-                <div class="col-md-12">
-                  <label class="text-black" for="subject">Subject</label> 
-                  <input type="subject" id="subject" class="form-control rounded-0">
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <label class="text-black" for="message">Message</label> 
-                  <textarea name="message" id="message" cols="30" rows="7" class="form-control rounded-0" placeholder="Write your notes or questions here..."></textarea>
-                </div>
-              </div>
-
-              <div class="row form-group">
-                <div class="col-md-12">
-                  <input type="submit" value="Send Message" class="btn btn-black rounded-0 py-3 px-4">
-                </div>
-              </div>
-
-  
-            </form>
-          </div>
-        
-        </div>
-        
-      </div>
-    </div>
--->
-
   
     <footer class="site-footer bg-white">
       <div class="container">
@@ -442,7 +393,6 @@
       </div>
     </footer>
     
-  
     <div class="sticky-footer text-ink ff-JSB bg-cream">
     	<div class="container">
     		<div class="row align-items-center py-4">
@@ -466,20 +416,20 @@
     
   </div> <!-- .site-wrap -->
 
-  <script th:src="@{/js/jquery-3.3.1.min.js}"></script>
-  <script th:src="@{/js/jquery-migrate-3.0.1.min.js}"></script>
-  <script th:src="@{/js/jquery-ui.js}"></script>
-  <script th:src="@{/js/popper.min.js}"></script>
-  <script th:src="@{/js/bootstrap.min.js}"></script>
-  <script th:src="@{/js/owl.carousel.min.js}"></script>
-  <script th:src="@{/js/jquery.stellar.min.js}"></script>
-  <script th:src="@{/js/jquery.countdown.min.js}"></script>
-  <script th:src="@{/js/bootstrap-datepicker.min.js}"></script>
-  <script th:src="@{/js/jquery.easing.1.3.js}"></script>
-  <script th:src="@{/js/aos.js}"></script>
-  <script th:src="@{/js/jquery.fancybox.min.js}"></script>
-  <script th:src="@{/js/jquery.sticky.js}"></script>  
-  <script th:src="@{/js/main.js}"></script>
+  <script src="/js/jquery-3.3.1.min.js"></script>
+  <script src="/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="/js/jquery-ui.js"></script>
+  <script src="/js/popper.min.js"></script>
+  <script src="/js/bootstrap.min.js"></script>
+  <script src="/js/owl.carousel.min.js"></script>
+  <script src="/js/jquery.stellar.min.js"></script>
+  <script src="/js/jquery.countdown.min.js"></script>
+  <script src="/js/bootstrap-datepicker.min.js"></script>
+  <script src="/js/jquery.easing.1.3.js"></script>
+  <script src="/js/aos.js"></script>
+  <script src="/js/jquery.fancybox.min.js"></script>
+  <script src="/js/jquery.sticky.js"></script>  
+  <script src="/js/main.js"></script>
     
   </body>
 </html>
