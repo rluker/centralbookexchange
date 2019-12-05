@@ -383,8 +383,8 @@
     		
         		<div class="col-6 text-left">
             		<ul class="social-media">
-              			<li><a href="https://www.facebook.com/CentralBookExchange" class="mr-1"><span class="icon-facebook"></span></a></li>
-              			<li><a href="https://www.instagram.com/centralbookexchange/" class=""><span class="icon-instagram"></span></a></li>
+              			<li><a href="https://www.facebook.com/CentralBookExchange" target="_blank" class="mr-1"><span class="icon-facebook"></span></a></li>
+              			<li><a href="https://www.instagram.com/centralbookexchange/" target="_blank" class=""><span class="icon-instagram"></span></a></li>
             		</ul>
         		</div>
         
