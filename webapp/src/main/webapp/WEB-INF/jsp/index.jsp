@@ -73,8 +73,8 @@
                 <li><a href="#home-section" class="nav-link">Home</a></li>
                 <li><a href="#events-section" class="nav-link">Events</a></li>
                 <li><a href="#staff-picks-section" class="nav-link">Staff Picks</a></li>
-          		<li><a href="https://www.central-bookexchange.com/cart" class="nav-link">Old Store</a></li>         
-          		<li><a href="https://www.central-bookexchange.com/offline-search" class="nav-link">Search</a></li>
+          		<li><a href="https://www.central-bookexchange.com/cart" target="_blank" class="nav-link">Old Store</a></li>
+          		<li><a href="https://www.central-bookexchange.com/offline-search" target="_blank" class="nav-link">Search</a></li>
               </ul>
             </nav>
           </div>
