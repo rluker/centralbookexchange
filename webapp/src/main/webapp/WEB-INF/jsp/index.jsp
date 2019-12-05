@@ -372,16 +372,12 @@
   
     <footer class="site-footer bg-white">
       <div class="container">
-        <div class="row pt-5 mt-5 text-center">
-          <div class="col-md-12">
             <div class="border-top pt-5">
             <p>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-        Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
-        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-      </p>
-            </div>
-          </div>
+       		 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+        	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+        	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+      		</p>
           
         </div>
       </div>
@@ -390,6 +386,7 @@
     <div class="sticky-footer text-ink ff-JSB bg-cream">
     	<div class="container">
     		<div class="row align-items-center py-4">
+    		
         		<div class="col-6 text-left">
             		<ul class="social-media">
               			<li><a href="https://www.facebook.com/CentralBookExchange" class="mr-1"><span class="icon-facebook"></span></a></li>
@@ -402,8 +399,8 @@
             			<a href="tel:8014853913" class="icon-phone mr-3 ml-3 text-ink"></a>
             			<a href="mailto:customerservice@citywbooks.com" class="icon-envelope text-ink"></a>
             		</p>
-
       			</div>
+      			
       		</div>
       	</div>
     </div>

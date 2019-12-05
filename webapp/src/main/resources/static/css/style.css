@@ -81,7 +81,7 @@ h1, h2, h3, h4, h5,
 .ff-JSH{ font-family: 'Julius Sans One', sans-serif; font-size: 1.8em; font-weight: 600; }
 .ff-NSB{ font-family: 'Nunito', sans-serif; font-size: 1.6em; font-weight: 600; }
 .ff-NB{ font-family: 'Nunito', sans-serif; font-size: 1.4em; font-weight: 700; }
-.ff-JSB{ font-family: 'Julius Sans One', sans-serif; font-size: 1.1em; }
+.ff-JSB{ font-family: 'Julius Sans One', sans-serif; font-size: 1.4em; }
 .ff-N{ font-family: 'Nunito', sans-serif; font-size: 1.2em; }
 .ff-NW{ font-family: 'Nunito', sans-serif; font-size: 1.1em; }
 .ff-JS{ font-family: 'Julius Sans One', sans-serif; font-size: 1em; }
@@ -1480,12 +1480,12 @@ h1, h2, h3, h4, h5,
   display: inline-block;
   margin: 0; }
 .social-media li a {
-  color: #fff;
+  color: white;
   display: inline-block;
-  width: 30px;
-  height: 30px;
+  width: 1.6em;
+  height: 1.6em;
   border-radius: 50%;
-  background: #000;
+  background: var(--deep-red);
   position: relative; }
 .social-media li a span {
   position: absolute;
@@ -1495,7 +1495,7 @@ h1, h2, h3, h4, h5,
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
 .social-media li a:hover {
-  color: #9d1d19; }
+  color: var(--ink); }
 
 .ft-feature-1 {
   margin-bottom: 80px; }
@@ -1810,7 +1810,7 @@ h1, h2, h3, h4, h5,
 	z-index: 100;
 	position: sticky;
     bottom: 1%;
-    height: 4em;
+    height: auto;
     /*background-color: rgba(252, 249, 242, 0.9);*/
     -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2); 
