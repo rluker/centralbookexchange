@@ -161,12 +161,10 @@
       <div class="container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
-            <h2 class="mb-3 text-red ff-NG">Event History</h2>
+            <h2 class="mb-3 text-red ff-NG">Event Details</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
           </div>
         </div>
-
-
 
 			<div id="generated-events">
 				
@@ -200,10 +198,6 @@
 								<span class="shadow-text"><%= i %></span>
 								<h3 class="text-ink mb-4 ff-NSB"><%= currentName %></h3>
 								<p class="mb-4"><%= currentEvent.getDescription() %></p>
-								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-									Ducimus soluta assumenda sed optio, error at?
-								</p>
-
 							</div>	
 						</div>
 					</div>
