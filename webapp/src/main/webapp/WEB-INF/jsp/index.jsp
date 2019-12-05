@@ -1,4 +1,6 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ page import="java.util.List" %>
+<%@ page import="com.centralbookexchange.webapp.model.Event" %>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -78,7 +80,7 @@
           </div>
 
 
-          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3 position-relative"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3"></span></a></div>
+          <div class="col-6 d-inline-block d-xl-none ml-md-0 py-3 position-relative"><a href="#" class="site-menu-toggle js-menu-toggle text-black float-right"><span class="icon-menu h3 text-red"></span></a></div>
 
         </div>
       </div>
@@ -169,55 +171,47 @@
 
 			<div id="generated-events">
 				
-				<c:forEach var = "i" begin = "1" end = "5">
-        			Item <c:out value = "${i}"/><p>
-      			</c:forEach>
-      			
+				<% 
+					List<Event> eventList = (List<Event>) request.getAttribute("eventsList"); 
+                	int numEvents = eventList.size();
+                	for(int i = 0; i < numEvents; i++)
+                	{
+                		Event currentEvent = eventList.get(i);
+                		String currentName = currentEvent.getName();
+                		request.setAttribute("eventImagePath", "/images/events/" + currentName + ".png");
+				%>
+				
+					<div class="bg-white py-4 mb-4">
+					<% if( i % 2 == 0 ){ %> 
+						<div class="row mx-4 my-4 product-item-2 align-items-start">
+							<div class="col-md-6 mb-5 mb-md-0">
+								<img src="${eventImagePath}" alt=<%= currentName %> class="img-fluid">
+							</div>
+							
+							<div class="col-md-5 ml-auto product-title-wrap">
+					
+					<% } else { %> 
+						<div class="row mx-4 my-4 product-item-2 align-items-start">
+							<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
+								<img src="${eventImagePath}" alt=<%= currentName %> class="img-fluid">
+							</div>
 
+							<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
+					<% }%>
+								<span class="shadow-text"><%= i %></span>
+								<h3 class="text-ink mb-4 ff-NSB"><%= currentName %></h3>
+								<p class="mb-4"><%= currentEvent.getDescription() %></p>
+								<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+									Ducimus soluta assumenda sed optio, error at?
+								</p>
 
-				<div class="bg-white py-4 mb-4">
-					<div class="row mx-4 my-4 product-item-2 align-items-start">
-						<div class="col-md-6 mb-5 mb-md-0">
-							<img src="/images/bookshelves/cbe_0040.JPG" alt="Image" class="img-fluid">
-						</div>
-
-						<div class="col-md-5 ml-auto product-title-wrap">
-							<span class="shadow-text">A</span>
-							<h3 class="text-ink mb-4 ff-NSB">Event A</h3>
-							<p class="mb-4">Et tempora id nostrum saepe amet doloribus
-								deserunt totam officiis cupiditate asperiores quasi accusantium
-								voluptatum dolorem quae sapiente voluptatem ratione odio iure
-								blanditiis earum fuga molestiae alias dicta perferendis
-								inventore!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Ducimus soluta assumenda sed optio, error at?</p>
-
-						</div>
-					</div>
-				</div>
-
-				<div class="bg-white py-4">
-					<div class="row mx-4 my-4 product-item-2 align-items-start">
-						<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-							<img src="/images/bookshelves/cbe_0040.JPG" alt="Image" class="img-fluid">
-						</div>
-
-						<div
-							class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
-							<span class="shadow-text">B</span>
-							<h3 class="text-ink mb-4 ff-NSB">Event B</h3>
-							<p class="mb-4">Et tempora id nostrum saepe amet doloribus
-								deserunt totam officiis cupiditate asperiores quasi accusantium
-								voluptatum dolorem quae sapiente voluptatem ratione odio iure
-								blanditiis earum fuga molestiae alias dicta perferendis
-								inventore!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-								Ducimus soluta assumenda sed optio, error at?</p>
-
+							</div>	
 						</div>
 					</div>
-				</div>
+					
+				<%} %>
 
+	
 			</div>
 	
 
