@@ -84,7 +84,6 @@
 
         </div>
       </div>
-      
     </header>
      
     <div class="site-blocks-cover overlay" data-aos="fade" data-stellar-background-ratio="0.5">
@@ -384,8 +383,9 @@
     </footer>
     
     <div class="sticky-footer text-ink ff-JSB bg-cream">
+        <div class="top-bar py-1 bg-red text-cream ff-JS"></div>
     	<div class="container">
-    		<div class="row align-items-center py-4">
+    		<div class="row align-items-center py-2">
     		
         		<div class="col-6 text-left">
             		<ul class="social-media">
