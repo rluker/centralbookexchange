@@ -10,8 +10,10 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.centralbookexchange.webapp.model.Banner;
+import com.centralbookexchange.webapp.model.Book;
 import com.centralbookexchange.webapp.model.Email;
 import com.centralbookexchange.webapp.model.Event;
+import com.centralbookexchange.webapp.model.StaffPick;
 
 @Repository
 public class CBERepository
@@ -35,6 +37,19 @@ public class CBERepository
         		rs.getInt("eventId"),
                 getEventById(rs.getInt("eventId")),
                 rs.getString("eventTimes")
+        	)
+        );
+    }
+    
+    public List<StaffPick> getAllPicks() 
+    {
+        String sql = "SELECT * FROM staffpicks";
+
+        return db.query( sql, (rs, rowNum) -> 
+        	new StaffPick
+        	(
+        		rs.getString("pickText"),
+                getBookById(rs.getInt("pickId"))
         	)
         );
     }
@@ -67,5 +82,18 @@ public class CBERepository
         ) ).get(0);
     }
 	
+    public Book getBookById(int id) 
+    {
+        String sql = "SELECT * FROM books WHERE id = " + id;
+
+        return ( db.query( sql, (rs, rowNum) -> 
+        	new Book
+        	(
+        		rs.getString("title"),
+                rs.getString("author"),
+                rs.getString("image")
+        	)
+        ) ).get(0);
+    }
     
 }

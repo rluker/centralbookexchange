@@ -1,7 +1,7 @@
 <%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
 <%@ page import="java.util.List" %>
-<%@ page import="com.centralbookexchange.webapp.model.Event" %>
-<%@ page import="com.centralbookexchange.webapp.model.Banner" %>
+<%@ page import="com.centralbookexchange.webapp.model.*" %>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -76,7 +76,7 @@
                 <li><a href="#events-section" class="nav-link">Events</a></li>
                 <li><a href="#staff-picks-section" class="nav-link">Staff Picks</a></li>
           		<li><a href="https://www.central-bookexchange.com/cart" target="_blank" class="nav-link">Old Store</a></li>
-          		<li><a href="https://www.central-bookexchange.com/offline-search" target="_blank" class="nav-link">Search</a></li>
+          		<li><a href="#search" class="nav-link">Search</a></li>
               </ul>
             </nav>
           </div>
@@ -134,17 +134,13 @@
              		String eventName = bannerList.get(i).getBaseEvent().getName();
              		request.setAttribute("bannerImagePath", "/banners/" + eventName + ".png");
              		%>
-             
              		<div>
             			<div class="event-banner">
               				<figure class="mb-4 d-block align-items-center justify-content-center">
               					<div><img src="${bannerImagePath}" alt=<%= eventName %> class="mb-3"></div>
               				</figure> 
               			</div>  
-              			<!-- 
-              			<p></p>
-            			<p class="text-grey ff-N">Event details.</p> 
-              			 -->
+              			<!--  <p></p> <p class="text-grey ff-N">Event details.</p>  -->
               		</div>
                	<% }%>
 
@@ -155,9 +151,9 @@
       <div class="container" style="'background: rgb(0,0,0,0.3);'">
 
         <div class="row align-items-center justify-content-center">
-          <form action="/" method="post" class="col-md-7">
-            <h2 class = "ff-JSL text-cream mb-4">Get notified about upcoming events!</h2>
-            <div class="d-flex py-4">
+          <form action="/" method="post" class="col-md-7 wel-col">
+            <h2 class = "ff-JSL text-cream py-2">Get notified about upcoming events!</h2>
+            <div class="d-flex py-3">
               <input type="email" id="userEmail" name="userEmail" class="form-control rounded-0" placeholder="Enter your email address">
               <input type="submit" class="btn btn-white btn-outline-white rounded-0" value="submit">
             </div>
@@ -172,11 +168,11 @@
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
             <h2 class="mb-3 text-red ff-NG">Event Details</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam.</p>
           </div>
         </div>
 
-			<div id="generated-events">
+		<div id="generated-events">
 				
 				<% 
 					List<Event> eventList = (List<Event>) request.getAttribute("eventsList"); 
@@ -187,11 +183,11 @@
                 		request.setAttribute("eventImagePath", "/images/events/" + currentName + ".png");
 				%>
 				
-					<div class="bg-white py-4 mb-4">
+					<div class="bg-cream py-4 mb-4">
 					<% if( i % 2 == 0 ){ %> 
 						<div class="row mx-4 my-4 product-item-2 align-items-start">
 							<div class="col-md-6 mb-5 mb-md-0">
-								<img src="${eventImagePath}" alt=<%= currentName %> class="img-fluid">
+								<img src="${eventImagePath}" alt=<%=currentName%> class="img-fluid img-border">
 							</div>
 							
 							<div class="col-md-5 ml-auto product-title-wrap">
@@ -199,13 +195,13 @@
 					<% } else { %> 
 						<div class="row mx-4 my-4 product-item-2 align-items-start">
 							<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
-								<img src="${eventImagePath}" alt=<%= currentName %> class="img-fluid">
+								<img src="${eventImagePath}" alt=<%=currentName%> class="img-fluid img-border">
 							</div>
 
 							<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
 					<% }%>
 								<span class="shadow-text"></span>
-								<h3 class="text-ink mb-4 ff-NSB"><%= currentName %></h3>
+								<h3 class="text-ink mb-4 ff-NSB"><%=currentName%></h3>
 								<p class="mb-4"><%= currentEvent.getDescription() %></p>
 							</div>	
 						</div>
@@ -222,10 +218,56 @@
           <div class="col-md-6 text-center">
             <h3 class="section-sub-title">Recommended</h3>
             <h2 class="mb-3 ff-NG text-red">Staff Picks</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium vel ut eveniet aut consequatur laboriosam ipsam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae nostrum natus excepturi fuga ullam accusantium.</p>
           </div>
         </div>
         <div class="row">
+        
+        <!-- 
+        
+                	<% 
+//				List<StaffPick> pickList = (List<StaffPick>) request.getAttribute("PickList"); 
+//             	for(int i = 0; i < pickList.size(); i++)
+//             	{
+//             		StaffPick pick = pickList.get(i);
+//             		Book pickBook = pick.getBaseBook();
+//             		String pickText = pick.getPickText();
+//             		String pickTitle = pickBook.getTitle();
+//             		String pickAuthor = pickBook.getAuthor();
+//             		request.setAttribute("pickImagePath", pickBook.getBookImage());
+//             		request.setAttribute("searchPath", "https://www.central-bookexchange.com/quicksearch/all/" + pickTitle);
+//             		%>
+             		<div class="col-lg-4 col-md-6 mb-5">
+            			<div class="staff-pick">
+             				<figure class="box-shadow">
+              					<img src="${pickImagePath}" alt=pickTitle class="img-fluid">
+              				</figure> 
+              			    <div>
+                				<h3 class="ff-NSB">pickTitle%></h3>
+                				<h2>Author: pickAuthor%></h2>
+                				<p class="mb-4">pickText%></p>
+                				<div>
+                 					<a href="${searchPath}" class="btn btn-red mr-1 rounded-2">Search Store</a>
+                				</div>
+             				</div>
+            			</div>
+          			</div>
+			<% 
+//			}
+			%>
+        
+         -->
+         
+         <%
+         String quickSearch = "https://www.central-bookexchange.com/quicksearch/all/";
+         request.setAttribute("searchPath", quickSearch + "book");
+         request.setAttribute("searchPath1", quickSearch + "book one");
+         request.setAttribute("searchPath2", quickSearch + "book two");
+         request.setAttribute("searchPath3", quickSearch + "book three");
+         request.setAttribute("searchPath4", quickSearch + "book four");
+         request.setAttribute("searchPath5", quickSearch + "book five");
+         %>
+        
           <div class="col-lg-4 col-md-6 mb-5">
             <div class="staff-pick">
               <figure class="box-shadow">
@@ -233,14 +275,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -253,14 +290,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book One</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath1}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -273,14 +305,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Two</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath2}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -293,14 +320,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Three</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath3}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -313,14 +335,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Four</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath4}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -333,14 +350,9 @@
               </figure>
               <div>
                 <h3 class="ff-NSB"><a href="#">Book Five</a></h3>
-                <div class="mb-3">
-                  <span class="meta-icons mr-3"><a href="#" class="mr-2"><span class="icon-star text-warning"></span></a> 5.0</span>
-                  <span class="meta-icons wishlist"><a href="#" class="mr-2"><span class="icon-heart"></span></a> 29</span>
-                </div>
-                <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
-                  <a href="#" class="btn btn-black mr-1 rounded-0">Cart</a>
-                  <a href="#" class="btn btn-black btn-outline-black ml-1 rounded-0">View</a>
+                  <a href="${searchPath5}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
                 </div>
               </div>
             </div>
@@ -350,6 +362,36 @@
         </div>
       </div>
     </div>
+    
+    
+   <div class="site-section bg-light" id="search" style="background: #8f5100;">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center">
+            <h3 class="section-sub-title mb-3">OLD STORE</h3>
+            <h2 class="mb-3 ff-NG text-red">Quick Search</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-7 mb-5">
+
+            <form action="/search" class="p-5 bg-cream img-border" method="get">
+              
+              <h2 class="ff-JSL text-red"></h2> 
+			<div class="d-flex py-3">
+              <input type="text" id="searchText" name="searchText" class="form-control rounded-2 ml-2 mr-2" placeholder="Search">
+              <input type="submit" class="btn btn-red rounded-2 ml-2" value="submit">
+            </div>
+              
+  
+            </form>
+          </div>
+        
+        </div>
+        
+      </div>
+    </div>
+    
   
     <footer class="site-footer bg-white">
       <div class="container">

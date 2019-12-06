@@ -141,6 +141,13 @@ h1, h2, h3, h4, h5,
   color: black;
     border: 2px solid black;
   background-color: transparent; }
+.btn.btn-red {
+    background: var( --deep-red );
+    color: var( --cream ); }
+.btn.btn-red:hover {
+  color: var( --deep-red );
+    border: 2px solid var( --deep-red );
+  background-color: transparent; }
 .btn.btn-black.btn-outline-black {
   color: black;
   background-color: transparent; }
@@ -364,7 +371,12 @@ h1, h2, h3, h4, h5,
 .fluid-img
 {
 	width: auto;
-	max-height: 1.5em;
+	max-height: 1.6em;
+}
+
+.img-border
+{
+	border: 3px solid var(--deep-red);
 }
 
 .site-navbar {
@@ -638,7 +650,7 @@ h1, h2, h3, h4, h5,
   border-bottom: .5em solid var(--deep-red);
   height: auto !important;}
 .sticky-wrapper + .site-blocks-cover {
-  margin-top: 100px; }
+  margin-top: 6em; }
 
 .sticky-wrapper.is-sticky .site-navbar {
   -webkit-box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);

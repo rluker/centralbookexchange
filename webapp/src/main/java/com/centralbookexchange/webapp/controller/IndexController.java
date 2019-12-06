@@ -27,6 +27,7 @@ public class IndexController
     	model.addObject("email", new Email());
     	model.addObject("eventsList", repo.getAllEvents());
     	model.addObject("bannerList", repo.getAllBanners());
+    	model.addObject("pickList", repo.getAllPicks());
         return model;
     }
     
@@ -35,6 +36,13 @@ public class IndexController
     {
     	repo.saveEmail(new Email(userEmail));
 		return "redirect:/";
+	}
+    
+    @GetMapping("/search")
+	public String search(@RequestParam String searchText) 
+    {
+    	String searchRedirect = "redirect:https://www.central-bookexchange.com/quicksearch/all/" + searchText;
+		return searchRedirect;
 	}
 
 }
