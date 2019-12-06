@@ -183,7 +183,7 @@
                 		request.setAttribute("eventImagePath", "/images/events/" + currentName + ".png");
 				%>
 				
-					<div class="bg-cream py-4 mb-4">
+					<div class="bg-white py-4 mb-4">
 					<% if( i % 2 == 0 ){ %> 
 						<div class="row mx-4 my-4 product-item-2 align-items-start">
 							<div class="col-md-6 mb-5 mb-md-0">
@@ -201,7 +201,7 @@
 							<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
 					<% }%>
 								<span class="shadow-text"></span>
-								<h3 class="text-ink mb-4 ff-NSB"><%=currentName%></h3>
+								<h3 class="text-red mb-4 ff-NSB"><%=currentName%></h3>
 								<p class="mb-4"><%= currentEvent.getDescription() %></p>
 							</div>	
 						</div>
