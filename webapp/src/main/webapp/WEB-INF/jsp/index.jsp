@@ -116,7 +116,7 @@
       </div>
     </div>  
 
-    <div class="site-section event-wrap" id="events-section">
+    <div class="site-section event-wrap bg-light" id="events-section">
       <div class="container navbar-target-container">
         <div class="row mb-4">
           <div class="col-12 text-center">
@@ -127,7 +127,8 @@
       </div>
       <div class="slide-one-item home-slider owl-carousel">
           
-			<% 
+				<% 
+				@SuppressWarnings("unchecked")
 				List<Banner> bannerList = (List<Banner>) request.getAttribute("bannerList"); 
              	for(int i = 0; i < bannerList.size(); i++)
              	{
@@ -172,32 +173,27 @@
           </div>
         </div>
 
-		<div id="generated-events">
-				
-				<% 
-					List<Event> eventList = (List<Event>) request.getAttribute("eventsList"); 
-                	for(int i = 0; i < eventList.size(); i++)
-                	{
-                		Event currentEvent = eventList.get(i);
-                		String currentName = currentEvent.getName();
-                		request.setAttribute("eventImagePath", "/images/events/" + currentName + ".png");
-				%>
-				
+			<div id="generated-events">	
+			<% 
+				@SuppressWarnings("unchecked")
+				List<Event> eventList = (List<Event>) request.getAttribute("eventsList"); 
+                for(int i = 0; i < eventList.size(); i++)
+                {
+                	Event currentEvent = eventList.get(i);
+                	String currentName = currentEvent.getName();
+                	request.setAttribute("eventImagePath", "/images/events/" + currentName + ".png"); %>
 					<div class="bg-white py-4 mb-4">
 					<% if( i % 2 == 0 ){ %> 
 						<div class="row mx-4 my-4 product-item-2 align-items-start">
 							<div class="col-md-6 mb-5 mb-md-0">
 								<img src="${eventImagePath}" alt=<%=currentName%> class="img-fluid img-border">
-							</div>
-							
+							</div>							
 							<div class="col-md-5 ml-auto product-title-wrap">
-					
 					<% } else { %> 
 						<div class="row mx-4 my-4 product-item-2 align-items-start">
 							<div class="col-md-6 mb-5 mb-md-0 order-1 order-md-2">
 								<img src="${eventImagePath}" alt=<%=currentName%> class="img-fluid img-border">
 							</div>
-
 							<div class="col-md-5 mr-auto product-title-wrap order-2 order-md-1">
 					<% }%>
 								<span class="shadow-text"></span>
@@ -206,13 +202,13 @@
 							</div>	
 						</div>
 					</div>
-					
-				<%} %>
+			<%} %>
 			</div>
+			
 		</div>
-    </div>
+ 	</div>
 
-    <div class="site-section" id="staff-picks-section">
+    <div class="site-section bg-light" id="staff-picks-section">
       <div class="container navbar-target-container">
         <div class="row mb-5 justify-content-center">
           <div class="col-md-6 text-center">
@@ -274,7 +270,7 @@
                 <img src="/images/books/book.png" alt="book" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book</a></h3>
+                <h3 class="ff-NSB">Book</h3>
                 <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -289,7 +285,7 @@
                 <img src="/images/books/book1.png" alt="book 1" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book One</a></h3>
+                <h3 class="ff-NSB">Book One</h3>
 				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath1}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -304,7 +300,7 @@
                 <img src="/images/books/book2.png" alt="book 2" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book Two</a></h3>
+                <h3 class="ff-NSB">Book Two</h3>
 				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath2}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -319,7 +315,7 @@
                 <img src="/images/books/book3.png" alt="book 3" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book Three</a></h3>
+                <h3 class="ff-NSB">Book Three</h3>
 				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath3}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -334,7 +330,7 @@
                 <img src="/images/books/book4.png" alt="book 4" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book Four</a></h3>
+                <h3 class="ff-NSB">Book Four</h3>
 				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath4}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -349,7 +345,7 @@
                 <img src="/images/books/book5.png" alt="book 5" class="img-fluid">
               </figure>
               <div>
-                <h3 class="ff-NSB"><a href="#">Book Five</a></h3>
+                <h3 class="ff-NSB">Book Five</h3>
 				<p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
                 <div>
                   <a href="${searchPath5}" target="_blank" class="btn btn-red mr-1 rounded-2">Search Store</a>
@@ -368,19 +364,19 @@
       <div class="container">
         <div class="row mb-5">
           <div class="col-12 text-center">
-            <h3 class="section-sub-title mb-3">OLD STORE</h3>
+            <h3 class="section-sub-title mt-2 mb-3">OLD STORE</h3>
             <h2 class="mb-3 ff-NG text-red">Quick Search</h2>
           </div>
         </div>
         <div class="row justify-content-center">
-          <div class="col-md-7 mb-5">
+          <div class="col-md-9 mb-5">
 
             <form action="/search" class="p-5 bg-cream img-border" method="get">
               
               <h2 class="ff-JSL text-red"></h2> 
 			<div class="d-flex py-3">
               <input type="text" id="searchText" name="searchText" class="form-control rounded-2 ml-2 mr-2" placeholder="Search">
-              <input type="submit" class="btn btn-red rounded-2 ml-2" value="submit">
+              <input type="submit" class="btn btn-red rounded-2 ml-3 mr-2" value="search">
             </div>
               
   
